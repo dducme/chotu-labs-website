@@ -49,22 +49,35 @@
 </head>
 <body class="antialiased">
 
-    <!-- Header & Navigation (Simulated Global Header) -->
+    <!-- Header & Navigation (Synced Global Dark Header) -->
     <header class="sticky top-0 z-50 bg-p-teal shadow-xl">
         <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <a href="#top" class="text-2xl font-extrabold tracking-tight text-bg-cream">
+            <a href="index.html" class="text-2xl font-extrabold tracking-tight text-bg-cream">
                 Chotu Labs<span class="text-a-lime">.</span>
             </a>
             <div class="hidden sm:flex space-x-6 text-sm font-medium">
                 <!-- Navigation links pointing to sections or other (future) pages -->
                 <a href="index.html" class="text-s-sand hover:text-a-lime transition">Home</a>
                 <a href="#services" class="text-a-lime font-bold transition">Services & Work</a>
+                <a href="our_work.html" class="text-s-sand hover:text-a-lime transition">Our Work</a>
                 <a href="company_resources.html" class="text-s-sand hover:text-a-lime transition">Expertise & Resources</a>
-                <a href="#contact" class="px-4 py-2 bg-a-lime text-p-teal font-bold rounded-lg hover:bg-a-lime/80 transition cta-button">
+                <a href="contact.html" class="px-4 py-2 bg-a-lime text-p-teal font-bold rounded-lg hover:bg-a-lime/80 transition cta-button">
                     Schedule Digital Acceleration Session
                 </a>
             </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="sm:hidden text-bg-cream focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
         </nav>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden sm:hidden bg-p-teal border-t border-s-sand/20">
+            <a href="index.html" class="block px-4 py-3 text-s-sand hover:bg-p-teal/90 transition">Home</a>
+            <a href="#services" class="block px-4 py-3 text-a-lime font-bold hover:bg-p-teal/90 transition">Services & Work</a>
+            <a href="our_work.html" class="block px-4 py-3 text-s-sand hover:bg-p-teal/90 transition">Our Work</a>
+            <a href="company_resources.html" class="block px-4 py-3 text-s-sand hover:bg-p-teal/90 transition">Expertise & Resources</a>
+            <a href="contact.html" class="block px-4 py-3 text-p-teal bg-a-lime hover:bg-a-lime/80 transition font-bold">Schedule Digital Acceleration Session</a>
+        </div>
     </header>
 
     <main>
@@ -135,7 +148,7 @@
 
         <!-- CTA between sections -->
         <div class="text-center py-12 bg-p-teal">
-            <a href="#contact-section" class="cta-button inline-flex items-center justify-center px-10 py-4 border border-transparent text-lg font-bold rounded-xl shadow-2xl shadow-a-lime/60 text-p-teal bg-a-lime hover:bg-a-lime/80 transition duration-300 transform hover:scale-[1.03]">
+            <a href="contact.html" class="cta-button inline-flex items-center justify-center px-10 py-4 border border-transparent text-lg font-bold rounded-xl shadow-2xl shadow-a-lime/60 text-p-teal bg-a-lime hover:bg-a-lime/80 transition duration-300 transform hover:scale-[1.03]">
                 Schedule Your Digital Acceleration Session NOW!
             </a>
         </div>
@@ -144,7 +157,7 @@
         <section id="services-grid" class="py-20 md:py-28 bg-bg-cream border-b border-p-teal/10">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="section-title text-3xl md:text-4xl font-bold mb-6 text-center text-p-teal mx-auto">Specialized Expertise. Guaranteed Outcomes.</h2>
-                 <p class="text-center text-xl text-n-graphite max-w-4xl mx-auto mb-12">
+                   <p class="text-center text-xl text-n-graphite max-w-4xl mx-auto mb-12">
                     Our team are deep practitioners in four critical areas, ensuring immediate alignment with high-value KPIs.
                 </p>
                 
@@ -171,8 +184,8 @@
                     </div>
                     <!-- Metric Highlight -->
                     <div class="lg:col-span-4 text-center mt-8 p-6 bg-s-sand/50 rounded-lg">
-                         <p class="text-2xl font-extrabold text-p-teal mb-2">**Achieve** **10–25% Marketing ROI Increases**.</p>
-                         <p class="text-lg text-n-graphite">Clients see full fee payback in **under 30 days**, guaranteed.</p>
+                             <p class="text-2xl font-extrabold text-p-teal mb-2">**Achieve** **10–25% Marketing ROI Increases**.</p>
+                           <p class="text-lg text-n-graphite">Clients see full fee payback in **under 30 days**, guaranteed.</p>
                     </div>
                 </div>
             </div>
@@ -212,7 +225,7 @@
                 </div>
 
                 <div class="text-center mt-16">
-                     <a href="#contact-section" class="cta-button inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-bold rounded-lg shadow-lg text-p-teal bg-a-lime hover:bg-a-lime/80 transition duration-300">
+                    <a href="contact.html" class="cta-button inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-bold rounded-lg shadow-lg text-p-teal bg-a-lime hover:bg-a-lime/80 transition duration-300">
                         Discuss Your Results Roadmap →
                     </a>
                 </div>
@@ -289,7 +302,7 @@
 
             <!-- Logo, Copyright, and Social Block (BOTTOM SECTION) -->
             <div>
-                <a href="#top" class="text-3xl font-extrabold tracking-tight text-bg-cream">
+                <a href="index.html" class="text-3xl font-extrabold tracking-tight text-bg-cream">
                     Chotu Labs<span class="text-a-lime">.</span>
                 </a>
                 <p class="text-xs text-s-sand leading-relaxed max-w-xs pt-4">
@@ -306,5 +319,23 @@
         </div>
     </footer>
 
+    <script>
+        // --- Mobile Menu Toggle Script (REQUIRED FOR MOBILE HEADER) ---
+        
+        // 1. Mobile Menu Toggle: Toggles the 'hidden' class on the mobile menu div.
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // 2. Close mobile menu on anchor link click: Ensures menu closes if navigating to a section on the same page.
+        document.getElementById('mobile-menu').querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                // Check if the link is an anchor link (starts with #)
+                if (link.getAttribute('href').startsWith('#')) {
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
