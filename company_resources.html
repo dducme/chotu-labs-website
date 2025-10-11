@@ -65,7 +65,19 @@
                     Schedule Digital Acceleration Session
                 </a>
             </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="sm:hidden text-bg-cream focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
         </nav>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden sm:hidden bg-p-teal border-t border-s-sand/20">
+            <a href="index.html" class="block px-4 py-3 text-s-sand hover:bg-p-teal/90 transition">Home</a>
+            <a href="services_work.html" class="block px-4 py-3 text-s-sand hover:bg-p-teal/90 transition">Services & Work</a>
+            <a href="our_work.html" class="block px-4 py-3 text-s-sand hover:bg-p-teal/90 transition">Our Work</a>
+            <a href="#team" class="block px-4 py-3 text-a-lime font-bold hover:bg-p-teal/90 transition">Expertise & Resources</a>
+            <a href="contact.html" class="block px-4 py-3 text-p-teal bg-a-lime hover:bg-a-lime/80 transition font-bold">Schedule Digital Acceleration Session</a>
+        </div>
     </header>
 
     <main>
@@ -131,7 +143,7 @@
                 </div>
 
                 <div class="text-center mt-16">
-                     <a href="contact.html" class="cta-button inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-bold rounded-lg shadow-lg text-p-teal bg-a-lime hover:bg-a-lime/80 transition duration-300">
+                    <a href="contact.html" class="cta-button inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-bold rounded-lg shadow-lg text-p-teal bg-a-lime hover:bg-a-lime/80 transition duration-300">
                         Meet the Full Team →
                     </a>
                 </div>
@@ -140,12 +152,12 @@
 
         <!-- 2.2. Blog & Insights / Free Guides & Assets (Next Section) -->
         <section id="resources" class="py-20 md:py-28 bg-bg-cream border-b border-p-teal/10">
-             <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+              <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
                 <h2 class="section-title text-3xl md:text-4xl font-bold mb-12 text-center text-p-teal mx-auto">
                     Exclusive Resources & Insights
                 </h2>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
                     
                     <!-- Download Component -->
                     <div class="p-8 rounded-xl shadow-2xl bg-s-sand border-l-8 border-a-lime">
@@ -156,7 +168,7 @@
                         <p class="text-n-graphite/90 leading-relaxed mb-6">
                             Download our free, niche-centric guide to kickstart your growth strategy and learn the non-negotiable steps to resilient market dominance.
                         </p>
-                        <a href="#" class="cta-button inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-bold rounded-lg shadow-lg text-bg-cream bg-p-teal hover:bg-p-teal/80 transition duration-300">
+                        <a href="contact.html" class="cta-button inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-bold rounded-lg shadow-lg text-bg-cream bg-p-teal hover:bg-p-teal/80 transition duration-300">
                             Download Free Guide & Join Community →
                         </a>
                     </div>
@@ -165,11 +177,11 @@
                     <div>
                         <p class="text-sm font-semibold text-p-teal mb-4 uppercase tracking-wider">Latest Insights</p>
                         <ul class="space-y-4">
-                            <li class="border-b border-p-teal/10 pb-2">
+                            <li class="border-b border-p-teal/10 pb-4">
                                 <a href="#" class="text-xl font-bold text-n-graphite hover:text-p-teal transition">Predictive Modeling: Why Marketing Data Needs to Be Proactive</a>
                                 <p class="text-sm text-n-graphite/80 mt-1">Blog Post | 5 min read</p>
                             </li>
-                            <li class="border-b border-p-teal/10 pb-2">
+                            <li class="border-b border-p-teal/10 pb-4">
                                 <a href="#" class="text-xl font-bold text-n-graphite hover:text-p-teal transition">The CMO's Tech Stack Checklist for 2025 Efficiency</a>
                                 <p class="text-sm text-n-graphite/80 mt-1">Article | 7 min read</p>
                             </li>
@@ -272,5 +284,23 @@
         </div>
     </footer>
 
+    <script>
+        // --- Mobile Menu Toggle Script (REQUIRED FOR MOBILE HEADER) ---
+        
+        // 1. Mobile Menu Toggle: Toggles the 'hidden' class on the mobile menu div.
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // 2. Close mobile menu on anchor link click: Ensures menu closes if navigating to a section on the same page.
+        document.getElementById('mobile-menu').querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                // Check if the link is an anchor link (starts with #)
+                if (link.getAttribute('href').startsWith('#')) {
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
