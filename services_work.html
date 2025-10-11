@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services & Work | Chotu Labs</title>
+    <!-- Tailwind CSS CDN and Custom Configuration -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // New Color Palette
+                        'p-teal': '#004E64',         // Primary: Midnight Teal
+                        's-sand': '#E3DCC2',         // Secondary: Warm Sand (Card/Form background)
+                        'a-lime': '#C5E86C',         // Accent: Bright Lime (CTA/Highlight)
+                        'n-graphite': '#3A3A3A',     // Neutral: Graphite Gray (Body Text)
+                        'bg-cream': '#FAFAF5',       // Background: Cream White
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #FAFAF5; 
+            color: #3A3A3A; /* Graphite Gray */
+        }
+        .cta-button {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(197, 232, 108, 0.7); /* Bright Lime shadow */
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #C5E86C; /* Bright Lime */
+            margin-top: 8px;
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation (Simulated Global Header) -->
+    <header class="sticky top-0 z-50 bg-p-teal shadow-xl">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#top" class="text-2xl font-extrabold tracking-tight text-bg-cream">
+                Chotu Labs<span class="text-a-lime">.</span>
+            </a>
+            <div class="hidden sm:flex space-x-6 text-sm font-medium">
+                <!-- Navigation links pointing to sections or other (future) pages -->
+                <a href="index.html" class="text-s-sand hover:text-a-lime transition">Home</a>
+                <a href="#services" class="text-a-lime font-bold transition">Services & Work</a>
+                <a href="company_resources.html" class="text-s-sand hover:text-a-lime transition">Expertise & Resources</a>
+                <a href="#contact" class="px-4 py-2 bg-a-lime text-p-teal font-bold rounded-lg hover:bg-a-lime/80 transition cta-button">
+                    Schedule Digital Acceleration Session
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Hero Header -->
+        <section id="page-hero" class="pt-24 pb-16 md:pt-32 md:pb-20 text-center bg-bg-cream border-b border-p-teal/10">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h1 class="text-5xl sm:text-6xl font-extrabold leading-tight mb-4 text-p-teal">
+                    Predictable Growth Starts Here.
+                </h1>
+                <p class="text-xl md:text-2xl text-n-graphite max-w-4xl mx-auto">
+                    The structured, results-driven consulting expertise you need to scale with certainty.
+                </p>
+            </div>
+        </section>
+
+        <!-- 1.1. Digital Strategy (Digital Dominance™) & Methodology Highlight -->
+        <section id="strategy-dominance" class="py-16 md:py-24 bg-s-sand border-b border-p-teal/10">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+                <h2 class="section-title text-3xl md:text-4xl font-bold mb-12 text-center text-p-teal mx-auto">
+                    Replacing Guesswork with Digital Dominance™
+                </h2>
+                <div class="md:flex md:space-x-12 items-center">
+                    <div class="md:w-1/3 mb-8 md:mb-0">
+                        <p class="text-5xl font-extrabold text-p-teal border-l-4 border-a-lime pl-4">
+                            Digital<br><span class="text-a-lime">Dominance™</span>
+                        </p>
+                    </div>
+                    <div class="md:w-2/3">
+                        <!-- Content -->
+                        <p class="text-xl text-n-graphite leading-relaxed">
+                            The **Digital Dominance™** framework is our non-negotiable process for engineering resilient market presence and revenue growth. It integrates specialized expertise in **Strategy, Data, and Technology** to ensure every marketing dollar is tied directly to measurable business outcomes.
+                        </p>
+                        <p class="text-lg text-n-graphite/80 mt-4">
+                            We don't just optimize campaigns—we build digital ecosystems capable of sustained competitive advantage, leading to 10-25% marketing ROI increases.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 1.1. Process Block (Three-Step Acceleration) -->
+        <section id="process" class="py-20 md:py-28 bg-bg-cream border-b border-p-teal/10">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title text-3xl md:text-4xl font-bold mb-12 text-center text-p-teal mx-auto">Our Three-Step Acceleration Process</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Process Block 1: Research & Analysis -->
+                    <div class="p-8 border-b-4 border-a-lime rounded-xl shadow-2xl transition duration-300 bg-s-sand hover:shadow-p-teal/20">
+                        <span class="text-4xl font-extrabold text-p-teal">01.</span>
+                        <h3 class="text-2xl font-bold my-4 text-n-graphite">Research & Analysis</h3>
+                        <p class="text-n-graphite">Deep dive into your business model, Unique Value Proposition (UVP), and competitive landscape. We define the true problem before prescribing solutions.</p>
+                    </div>
+                    <!-- Process Block 2: Strategy & Insights -->
+                    <div class="p-8 border-b-4 border-a-lime rounded-xl shadow-2xl transition duration-300 bg-s-sand hover:shadow-p-teal/20">
+                        <span class="text-4xl font-extrabold text-p-teal">02.</span>
+                        <h3 class="text-2xl font-bold my-4 text-n-graphite">Strategy & Insights</h3>
+                        <p class="text-n-graphite">Develop an insights-based, proprietary marketing strategy. This forms the blueprint for all future execution and strategic investment.</p>
+                    </div>
+                    <!-- Process Block 3: Execution & Roadmap -->
+                    <div class="p-8 border-b-4 border-a-lime rounded-xl shadow-2xl transition duration-300 bg-s-sand hover:shadow-p-teal/20">
+                        <span class="text-4xl font-extrabold text-p-teal">03.</span>
+                        <h3 class="text-2xl font-bold my-4 text-n-graphite">Execution & Roadmap</h3>
+                        <p class="text-n-graphite">Translate strategy into a defined, phased **Marketing Roadmap** with clear timelines, deliverables, and measurable outcome projections.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA between sections -->
+        <div class="text-center py-12 bg-p-teal">
+            <a href="#contact-section" class="cta-button inline-flex items-center justify-center px-10 py-4 border border-transparent text-lg font-bold rounded-xl shadow-2xl shadow-a-lime/60 text-p-teal bg-a-lime hover:bg-a-lime/80 transition duration-300 transform hover:scale-[1.03]">
+                Schedule Your Digital Acceleration Session NOW!
+            </a>
+        </div>
+        
+        <!-- 1.2. Channel Optimization & CRO (Guaranteed Outcomes) -->
+        <section id="services-grid" class="py-20 md:py-28 bg-bg-cream border-b border-p-teal/10">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title text-3xl md:text-4xl font-bold mb-6 text-center text-p-teal mx-auto">Specialized Expertise. Guaranteed Outcomes.</h2>
+                 <p class="text-center text-xl text-n-graphite max-w-4xl mx-auto mb-12">
+                    Our team are deep practitioners in four critical areas, ensuring immediate alignment with high-value KPIs.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Service 1: Digital Marketing Strategy -->
+                    <div class="p-6 rounded-xl border-t-4 border-p-teal hover:border-a-lime transition duration-300 shadow-lg bg-s-sand">
+                        <h3 class="text-xl font-bold mb-3 text-p-teal">Digital Marketing Strategy</h3>
+                        <p class="text-n-graphite">Defining the roadmap and execution blueprint for predictable, resilient growth across all channels.</p>
+                    </div>
+                    <!-- Service 2: Channel Optimization -->
+                    <div class="p-6 rounded-xl border-t-4 border-p-teal hover:border-a-lime transition duration-300 shadow-lg bg-s-sand">
+                        <h3 class="text-xl font-bold mb-3 text-p-teal">Channel Optimization</h3>
+                        <p class="text-n-graphite">Expert execution in **SEO, PPC, and Paid Social** to maximize visibility and conversion rate efficiency.</p>
+                    </div>
+                    <!-- Service 3: Automation Consulting -->
+                    <div class="p-6 rounded-xl border-t-4 border-p-teal hover:border-a-lime transition duration-300 shadow-lg bg-s-sand">
+                        <h3 class="text-xl font-bold mb-3 text-p-teal">Automation Consulting</h3>
+                        <p class="text-n-graphite">Building and integrating robust tech stacks to streamline lead nurturing and sales enablement processes.</p>
+                    </div>
+                    <!-- Service 4: Tech Stack Optimization -->
+                    <div class="p-6 rounded-xl border-t-4 border-p-teal hover:border-a-lime transition duration-300 shadow-lg bg-s-sand">
+                        <h3 class="text-xl font-bold mb-3 text-p-teal">Tech Stack Optimization</h3>
+                        <p class="text-n-graphite">Auditing and refining existing MarTech tools for maximum performance, data hygiene, and cost efficiency.</p>
+                    </div>
+                    <!-- Metric Highlight -->
+                    <div class="lg:col-span-4 text-center mt-8 p-6 bg-s-sand/50 rounded-lg">
+                         <p class="text-2xl font-extrabold text-p-teal mb-2">**Achieve** **10–25% Marketing ROI Increases**.</p>
+                         <p class="text-lg text-n-graphite">Clients see full fee payback in **under 30 days**, guaranteed.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1.3. Industry Specialization (Proof Points) -->
+        <section id="work" class="py-20 md:py-28 bg-bg-cream border-b border-p-teal/10">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title text-3xl md:text-4xl font-bold mb-12 text-center text-p-teal mx-auto">Measurable Results. Industry Proof.</h2>
+                <p class="text-center text-n-graphite max-w-3xl mx-auto mb-10">We specialize in delivering predictable results for high-growth sectors: **Premium Education, E-Commerce, and Healthcare.** We've successfully grown **over 500 brands** across high-growth industries.</p>
+                
+                <!-- Case Study Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Card 1: Premium Education -->
+                    <div class="p-6 rounded-xl shadow-2xl bg-s-sand border-l-8 border-a-lime">
+                        <p class="text-lg font-semibold text-p-teal mb-2">Premium Education: Shrewsbury International School</p>
+                        <h3 class="text-5xl font-extrabold text-n-graphite mb-4">+300% MQLs</h3>
+                        <p class="text-n-graphite/90">Developed and executed the GTM strategy for their India launch, driving a 300% increase in monthly qualified leads (MQLs) for admissions.</p>
+                        <a href="#" class="text-sm font-semibold text-p-teal hover:underline mt-3 block">Read Case Study →</a>
+                    </div>
+
+                    <!-- Card 2: DTC E-Commerce -->
+                    <div class="p-6 rounded-xl shadow-2xl bg-s-sand border-l-8 border-a-lime">
+                        <p class="text-lg font-semibold text-p-teal mb-2">DTC E-Commerce: Jockey</p>
+                        <h3 class="text-5xl font-extrabold text-n-graphite mb-4">15% ROI Lift</h3>
+                        <p class="text-n-graphite/90">Optimized Google and Social channels, driving a 15% lift in overall marketing ROI and achieving full fee payback in under 30 days.</p>
+                        <a href="#" class="text-sm font-semibold text-p-teal hover:underline mt-3 block">Read Case Study →</a>
+                    </div>
+
+                    <!-- Card 3: Healthcare/Wellness -->
+                    <div class="p-6 rounded-xl shadow-2xl bg-s-sand border-l-8 border-a-lime">
+                        <p class="text-lg font-semibold text-p-teal mb-2">Healthcare Group: Skinette Clinic</p>
+                        <h3 class="text-5xl font-extrabold text-n-graphite mb-4">40% Time Saved</h3>
+                        <p class="text-n-graphite/90">Implemented full marketing automation, streamlining patient acquisition and reducing internal administrative time on data management by 40%.</p>
+                        <a href="#" class="text-sm font-semibold text-p-teal hover:underline mt-3 block">Read Case Study →</a>
+                    </div>
+                </div>
+
+                <div class="text-center mt-16">
+                     <a href="#contact-section" class="cta-button inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-bold rounded-lg shadow-lg text-p-teal bg-a-lime hover:bg-a-lime/80 transition duration-300">
+                        Discuss Your Results Roadmap →
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section (Simulated, pointing to contact page/modal) -->
+        <section id="contact-section" class="py-20 bg-p-teal text-bg-cream text-center">
+            <h2 class="text-4xl font-extrabold mb-4">Ready for Your Digital Acceleration Session?</h2>
+            <p class="text-xl mb-6">We'll outline your customized Marketing Roadmap within 48 hours. Call us directly: **(880) 093-6344**</p>
+            <a href="contact.html" class="cta-button inline-flex items-center justify-center px-10 py-4 border border-transparent text-lg font-bold rounded-xl shadow-2xl shadow-a-lime/60 text-p-teal bg-a-lime hover:bg-a-lime/80 transition duration-300 transform hover:scale-[1.03]">
+                Request a Quote Now
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Footer: Detailed, Multi-Column Structure (Simulated Global Footer) -->
+    <footer class="bg-p-teal py-16 text-bg-cream">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- NEW: Four Equal Columns (Navigation and Contact - TOP SECTION) -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12 pb-10 mb-10 border-b border-p-teal/50">
+                
+                <!-- Column 1: Services & Work -->
+                <div>
+                    <h4 class="text-lg font-bold text-bg-cream mb-4">Services & Work</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#services-grid" class="text-s-sand hover:text-a-lime transition">Digital Strategy</a></li>
+                        <li><a href="#services-grid" class="text-s-sand hover:text-a-lime transition">Channel Optimization (SEO/PPC/SOCIAL)</a></li>
+                        <li><a href="#services-grid" class="text-s-sand hover:text-a-lime transition">Conversion Rate Optimization</a></li>
+                        <li><a href="#work" class="text-s-sand hover:text-a-lime transition">Industry Specialization</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: Company & Resources -->
+                <div>
+                    <h4 class="text-lg font-bold text-bg-cream mb-4">Company & Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="company_resources.html#team" class="text-s-sand hover:text-a-lime transition">Who We Are</a></li>
+                        <li><a href="#" class="text-s-sand hover:text-a-lime transition">Our Core Values</a></li>
+                        <li><a href="#" class="text-s-sand hover:text-a-lime transition">Careers</a></li>
+                        <li><a href="company_resources.html#resources" class="text-s-sand hover:text-a-lime transition">Blog & Insights</a></li>
+                        <li><a href="company_resources.html#resources" class="text-s-sand hover:text-a-lime transition">Free Guides & Assets</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Office & Contact -->
+                <div>
+                    <h4 class="text-lg font-bold text-bg-cream mb-4">Office & Contact</h4>
+                    <address class="text-s-sand text-sm not-italic mb-2">
+                        1074 Broadway,
+                        <br>
+                        Woodmere, NY
+                        <br>
+                        11598
+                    </address>
+                    <p class="text-s-sand text-lg font-bold">
+                        <a href="tel:8800936344" class="hover:text-a-lime transition">(880) 093-6344</a>
+                    </p>
+                </div>
+                
+                <!-- Column 4: Legal & Support -->
+                <div>
+                    <h4 class="text-lg font-bold text-bg-cream mb-4">Legal & Support</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="contact.html" class="text-s-sand hover:text-a-lime transition">Request a Quote</a></li>
+                        <li><a href="#" class="text-s-sand hover:text-a-lime transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-s-sand hover:text-a-lime transition">Terms of Use</a></li>
+                        <li><a href="#" class="text-s-sand hover:text-a-lime transition">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Logo, Copyright, and Social Block (BOTTOM SECTION) -->
+            <div>
+                <a href="#top" class="text-3xl font-extrabold tracking-tight text-bg-cream">
+                    Chotu Labs<span class="text-a-lime">.</span>
+                </a>
+                <p class="text-xs text-s-sand leading-relaxed max-w-xs pt-4">
+                    &copy; 2025 Chotu Labs Marketing LLC. All Rights Reserved.
+                </p>
+                <div class="flex space-x-4 text-xl text-s-sand pt-4">
+                    <!-- Simulated Social Icons -->
+                    <a href="#" aria-label="YouTube" class="hover:text-a-lime transition duration-200">YT</a> 
+                    <a href="#" aria-label="LinkedIn" class="hover:text-a-lime transition duration-200">IN</a>
+                    <a href="#" aria-label="Facebook" class="hover:text-a-lime transition duration-200">FB</a>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+
+</body>
+</html>

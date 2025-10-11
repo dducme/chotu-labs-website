@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Chotu Labs</title>
+    <!-- Tailwind CSS CDN and Custom Configuration -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // New Color Palette
+                        'p-teal': '#004E64',         // Primary: Midnight Teal
+                        's-sand': '#E3DCC2',         // Secondary: Warm Sand (Card/Form background)
+                        'a-lime': '#C5E86C',         // Accent: Bright Lime (CTA/Highlight)
+                        'n-graphite': '#3A3A3A',     // Neutral: Graphite Gray (Body Text)
+                        'bg-cream': '#FAFAF5',       // Background: Cream White
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #FAFAF5; 
+            color: #3A3A3A; /* Graphite Gray */
+        }
+        .cta-button {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(197, 232, 108, 0.7); /* Bright Lime shadow */
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #C5E86C; /* Bright Lime */
+            margin-top: 8px;
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation (Global Header) -->
+    <header class="sticky top-0 z-50 bg-p-teal shadow-xl">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-extrabold tracking-tight text-bg-cream">
+                Chotu Labs<span class="text-a-lime">.</span>
+            </a>
+            <div class="hidden sm:flex space-x-6 text-sm font-medium">
+                <!-- Navigation links pointing to sections or other (future) pages -->
+                <a href="index.html" class="text-s-sand hover:text-a-lime transition">Home</a>
+                <a href="services_work.html" class="text-s-sand hover:text-a-lime transition">Services</a>
+                <a href="our_work.html" class="text-s-sand hover:text-a-lime transition">Our Work</a>
+                <a href="company_resources.html" class="text-s-sand hover:text-a-lime transition">Expertise & Resources</a>
+                <a href="#contact-form" class="px-4 py-2 bg-a-lime text-p-teal font-bold rounded-lg hover:bg-a-lime/80 transition cta-button">
+                    Schedule Digital Acceleration Session
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Hero Header -->
+        <section id="page-hero" class="pt-24 pb-16 md:pt-32 md:pb-20 text-center bg-bg-cream border-b border-p-teal/10">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h1 class="text-5xl sm:text-6xl font-extrabold leading-tight mb-4 text-p-teal">
+                    Initiate Your Digital Acceleration Session
+                </h1>
+                <p class="text-xl md:text-2xl text-n-graphite max-w-4xl mx-auto">
+                    Stop the guesswork. Start building predictable, resilient growth with a clear strategy outlined in 48 hours.
+                </p>
+            </div>
+        </section>
+
+        <!-- 3.1. Request a Quote (Primary Form) -->
+        <section id="contact-form" class="py-20 md:py-28 bg-s-sand">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+                
+                <div class="bg-bg-cream p-6 sm:p-10 rounded-xl shadow-2xl border-t-8 border-a-lime">
+                    <h2 class="text-3xl font-bold text-p-teal mb-4">
+                        Request Your Customized Marketing Roadmap
+                    </h2>
+                    <p class="text-n-graphite/90 mb-6">
+                        Fill out the form below to initiate your **Digital Acceleration Session**. We'll outline your customized Marketing Roadmap within **48 hours**.
+                    </p>
+                    
+                    <!-- Formspree Integrated Form -->
+                    <form id="lead-form" method="POST" action="https://formspree.io/f/xqayyjko" class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        
+                        <!-- Name Fields -->
+                        <div>
+                            <label for="first_name" class="block text-sm font-medium text-n-graphite mb-1">First Name*</label>
+                            <input type="text" id="first_name" name="first_name" required class="w-full px-4 py-2 border border-p-teal/30 rounded-lg focus:ring-a-lime focus:border-a-lime transition">
+                        </div>
+                        <div>
+                            <label for="last_name" class="block text-sm font-medium text-n-graphite mb-1">Last Name*</label>
+                            <input type="text" id="last_name" name="last_name" required class="w-full px-4 py-2 border border-p-teal/30 rounded-lg focus:ring-a-lime focus:border-a-lime transition">
+                        </div>
+                        
+                        <!-- Contact Fields -->
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-n-graphite mb-1">Email Address*</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-p-teal/30 rounded-lg focus:ring-a-lime focus:border-a-lime transition">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-n-graphite mb-1">Phone*</label>
+                            <input type="tel" id="phone" name="phone" required class="w-full px-4 py-2 border border-p-teal/30 rounded-lg focus:ring-a-lime focus:border-a-lime transition">
+                        </div>
+
+                        <!-- Company Fields -->
+                        <div>
+                            <label for="company" class="block text-sm font-medium text-n-graphite mb-1">Company / Organization*</label>
+                            <input type="text" id="company" name="company" required class="w-full px-4 py-2 border border-p-teal/30 rounded-lg focus:ring-a-lime focus:border-a-lime transition">
+                        </div>
+                        <div>
+                            <label for="job_title" class="block text-sm font-medium text-n-graphite mb-1">Job Title*</label>
+                            <input type="text" id="job_title" name="job_title" required class="w-full px-4 py-2 border border-p-teal/30 rounded-lg focus:ring-a-lime focus:border-a-lime transition">
+                        </div>
+
+                        <!-- Message Field (Full Width) -->
+                        <div class="sm:col-span-2">
+                            <label for="help" class="block text-sm font-medium text-n-graphite mb-1">How can we help you achieve predictable growth?*</label>
+                            <textarea id="help" name="how_can_we_help" rows="4" required class="w-full px-4 py-2 border border-p-teal/30 rounded-lg focus:ring-a-lime focus:border-a-lime transition"></textarea>
+                        </div>
+                        
+                        <!-- Submit Button (Full Width) -->
+                        <div class="sm:col-span-2 text-center pt-4">
+                            <button type="submit" class="cta-button inline-flex items-center justify-center w-full px-8 py-3 border border-transparent text-lg font-bold rounded-xl shadow-lg shadow-a-lime/40 text-p-teal bg-a-lime hover:bg-a-lime/80 transition duration-300 transform hover:scale-[1.01]">
+                                Submit Request for Digital Acceleration Session
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <p class="text-center text-n-graphite/80 text-sm mt-6">
+                        Or call us directly: **(880) 093-6344**
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer: Detailed, Multi-Column Structure (Global Footer) -->
+    <footer class="bg-p-teal py-16 text-bg-cream">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Four Equal Columns (Navigation and Contact) -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12 pb-10 mb-10 border-b border-p-teal/50">
+                
+                <!-- Column 1: Services & Work -->
+                <div>
+                    <h4 class="text-lg font-bold text-bg-cream mb-4">Services & Work</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="services_work.html#strategy-dominance" class="text-s-sand hover:text-a-lime transition">Digital Strategy</a></li>
+                        <li><a href="services_work.html#services-grid" class="text-s-sand hover:text-a-lime transition">Channel Optimization (SEO/PPC/SOCIAL)</a></li>
+                        <li><a href="services_work.html#services-grid" class="text-s-sand hover:text-a-lime transition">Conversion Rate Optimization</a></li>
+                        <li><a href="our_work.html#work" class="text-s-sand hover:text-a-lime transition">Industry Specialization</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: Company & Resources -->
+                <div>
+                    <h4 class="text-lg font-bold text-bg-cream mb-4">Company & Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="company_resources.html#team" class="text-s-sand hover:text-a-lime transition">Who We Are</a></li>
+                        <li><a href="#" class="text-s-sand hover:text-a-lime transition">Our Core Values</a></li>
+                        <li><a href="#" class="text-s-sand hover:text-a-lime transition">Careers</a></li>
+                        <li><a href="company_resources.html#resources" class="text-s-sand hover:text-a-lime transition">Blog & Insights</a></li>
+                        <li><a href="company_resources.html#resources" class="text-s-sand hover:text-a-lime transition">Free Guides & Assets</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Office & Contact -->
+                <div>
+                    <h4 class="text-lg font-bold text-bg-cream mb-4">Office & Contact</h4>
+                    <address class="text-s-sand text-sm not-italic mb-2">
+                        1074 Broadway,
+                        <br>
+                        Woodmere, NY
+                        <br>
+                        11598
+                    </address>
+                    <p class="text-s-sand text-lg font-bold">
+                        <a href="tel:8800936344" class="hover:text-a-lime transition">(880) 093-6344</a>
+                    </p>
+                </div>
+                
+                <!-- Column 4: Legal & Support -->
+                <div>
+                    <h4 class="text-lg font-bold text-bg-cream mb-4">Legal & Support</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#contact-form" class="text-s-sand hover:text-a-lime transition">Request a Quote</a></li>
+                        <li><a href="#" class="text-s-sand hover:text-a-lime transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-s-sand hover:text-a-lime transition">Terms of Use</a></li>
+                        <li><a href="#" class="text-s-sand hover:text-a-lime transition">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Logo, Copyright, and Social Block (BOTTOM SECTION) -->
+            <div>
+                <a href="index.html" class="text-3xl font-extrabold tracking-tight text-bg-cream">
+                    Chotu Labs<span class="text-a-lime">.</span>
+                </a>
+                <p class="text-xs text-s-sand leading-relaxed max-w-xs pt-4">
+                    &copy; 2025 Chotu Labs Marketing LLC. All Rights Reserved.
+                </p>
+                <div class="flex space-x-4 text-xl text-s-sand pt-4">
+                    <!-- Simulated Social Icons -->
+                    <a href="#" aria-label="YouTube" class="hover:text-a-lime transition duration-200">YT</a> 
+                    <a href="#" aria-label="LinkedIn" class="hover:text-a-lime transition duration-200">IN</a>
+                    <a href="#" aria-label="Facebook" class="hover:text-a-lime transition duration-200">FB</a>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+    
+    <!-- JavaScript for Form Success Handling (Formspree often redirects, but this ensures a clean UI flow) -->
+    <script>
+        document.getElementById('lead-form').addEventListener('submit', function(e) {
+            // Since Formspree handles the POST, this prevents client-side processing,
+            // but we can add a simple message display here if Formspree redirects back.
+            // For production, Formspree handles the success page/message via their settings.
+            setTimeout(() => {
+                const form = document.getElementById('lead-form');
+                if (form) {
+                    // Simulates a clean success state after submission (which Formspree would handle via redirect)
+                    // The actual success handling is done by Formspree's redirect or AJAX response.
+                    console.log("Form submission initiated to Formspree endpoint.");
+                }
+            }, 100);
+        });
+    </script>
+
+</body>
+</html>
