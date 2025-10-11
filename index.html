@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chotu Labs | Predictable, Resilient Growth</title>
+    <!-- Tailwind CSS CDN and Custom Configuration -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // New Color Palette
+                        'p-teal': '#004E64',         // Primary: Midnight Teal
+                        's-sand': '#E3DCC2',         // Secondary: Warm Sand (Card/Form background)
+                        'a-lime': '#C5E86C',         // Accent: Bright Lime (CTA/Highlight)
+                        'n-graphite': '#3A3A3A',     // Neutral: Graphite Gray (Body Text)
+                        'bg-cream': '#FAFAF5',       // Background: Cream White
+                        // Old colors removed for clean theme
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #FAFAF5; 
+            color: #3A3A3A; /* Graphite Gray */
+        }
+        .cta-button {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(197, 232, 108, 0.7); /* Bright Lime shadow */
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #C5E86C; /* Bright Lime */
+            margin-top: 8px;
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-bg-cream/95 backdrop-blur-sm shadow-md border-b border-p-teal/10">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-extrabold tracking-tight text-p-teal">
+                Chotu Labs<span class="text-a-lime">.</span>
+            </a>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="sm:hidden text-p-teal focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+            <!-- Desktop Navigation -->
+            <div class="hidden sm:flex space-x-6 text-sm font-medium">
+                <a href="#services" class="text-n-graphite hover:text-p-teal transition">Services</a>
+                <a href="#work" class="text-n-graphite hover:text-p-teal transition">Our Work</a>
+                <a href="#team" class="text-n-graphite hover:text-p-teal transition">Expertise</a>
+                <a href="#contact" class="px-4 py-2 bg-a-lime text-p-teal font-bold rounded-lg hover:bg-a-lime/80 transition cta-button">
+                    Schedule Digital Acceleration Session NOW!
+                </a>
+            </div>
+        </nav>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden sm:hidden bg-bg-cream border-t border-p-teal/10">
+            <a href="#services" class="block px-4 py-3 text-p-teal hover:bg-s-sand transition">Services</a>
+            <a href="#work" class="block px-4 py-3 text-p-teal hover:bg-s-sand transition">Our Work</a>
+            <a href="#team" class="block px-4 py-3 text-p-teal hover:bg-s-sand transition">Expertise</a>
+            <a href="#contact" class="block px-4 py-3 text-p-teal bg-a-lime hover:bg-a-lime/80 transition font-bold">Schedule Digital Acceleration Session NOW!</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Hero Section (Homepage) -->
+        <section id="home" class="pt-24 pb-20 md:pt-40 md:pb-32 text-center bg-bg-cream border-b border-p-teal/10">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <span class="text-sm font-semibold tracking-widest uppercase text-p-teal mb-3 block">Strategy. Data. Execution.</span>
+                <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold leading-tight mb-6 text-n-graphite">
+                    Delivering <span class="text-p-teal">Predictable, Resilient Growth</span>.
+                </h1>
+                <p class="text-lg md:text-xl text-n-graphite max-w-4xl mx-auto mb-10">
+                    We replace guesswork with our **Digital Dominance™** framework. Eliminate the risk of poor expertise and unlock 10-25% marketing ROI increases.
+                </p>
+                <a href="#contact" class="cta-button inline-flex items-center justify-center px-10 py-4 border border-transparent text-lg font-bold rounded-xl shadow-2xl shadow-a-lime/60 text-p-teal bg-a-lime hover:bg-a-lime/80 transition duration-300 transform hover:scale-[1.03]">
+                    Schedule Digital Acceleration Session NOW!
+                </a>
+                <p class="mt-4 text-sm text-n-graphite/70">Clients see fee payback in **under 30 days**.</p>
+            </div>
+        </section>
+
+        <!-- 1.5. Methodology Highlight (New Structural Block) -->
+        <section id="methodology" class="py-16 md:py-24 bg-bg-cream border-b border-p-teal/10">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+                <div class="md:flex md:space-x-12 items-center">
+                    <div class="md:w-1/3 mb-8 md:mb-0">
+                        <h3 class="text-2xl font-bold text-p-teal border-l-4 border-a-lime pl-4">Our Unique Framework</h3>
+                        <p class="text-5xl font-extrabold text-p-teal mt-2">
+                            Digital<br><span class="text-a-lime">Dominance™</span>
+                        </p>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="text-xl text-n-graphite leading-relaxed">
+                            The **Digital Dominance™** framework is our non-negotiable process for engineering resilient market presence and revenue growth. It integrates specialized expertise in Data, Technology, and Strategy to ensure every marketing dollar is tied directly to measurable business outcomes.
+                        </p>
+                        <p class="text-lg text-n-graphite/80 mt-4">
+                            We don't just optimize campaigns—we build digital ecosystems capable of 4x MQL growth and sustained competitive advantage.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 2. Process Transparency (Marketing Roadmap) -->
+        <section id="process" class="py-20 md:py-28 bg-s-sand border-b border-p-teal/10">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title text-3xl md:text-4xl font-bold mb-12 text-center text-p-teal">Our Three-Step Acceleration Process</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-8 border border-p-teal/50 rounded-xl shadow-xl hover:shadow-p-teal/20 transition duration-300 bg-bg-cream">
+                        <span class="text-4xl font-extrabold text-p-teal">01.</span>
+                        <h3 class="text-2xl font-bold my-4 text-n-graphite">Research & Analysis</h3>
+                        <p class="text-n-graphite">Deep dive into your business model, UVP, and competitive landscape. We define the true problem before prescribing solutions.</p>
+                    </div>
+                    <div class="p-8 border border-p-teal/50 rounded-xl shadow-xl hover:shadow-p-teal/20 transition duration-300 bg-bg-cream">
+                        <span class="text-4xl font-extrabold text-p-teal">02.</span>
+                        <h3 class="text-2xl font-bold my-4 text-n-graphite">Strategy & Insights</h3>
+                        <p class="text-n-graphite">Develop an insights-based, proprietary marketing strategy. This forms the blueprint for all future execution and investment.</p>
+                    </div>
+                    <div class="p-8 border border-p-teal/50 rounded-xl shadow-xl hover:shadow-p-teal/20 transition duration-300 bg-bg-cream">
+                        <span class="text-4xl font-extrabold text-p-teal">03.</span>
+                        <h3 class="text-2xl font-bold my-4 text-n-graphite">Execution & Roadmap</h3>
+                        <p class="text-n-graphite">Translate strategy into a defined, phased **Marketing Roadmap** with clear timelines, deliverables, and measurable outcome projections.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Services Section (How We Can Help) -->
+        <section id="services" class="py-20 md:py-28 bg-bg-cream border-b border-p-teal/10">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title text-3xl md:text-4xl font-bold mb-12 text-center text-p-teal">Specialized Expertise. Guaranteed Outcomes.</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Start Service Loop Simulation -->
+                    <div class="p-6 rounded-xl border border-p-teal/20 hover:border-p-teal transition duration-300 shadow-lg bg-s-sand">
+                        <h3 class="text-xl font-bold mb-3 text-p-teal">Digital Marketing Strategy</h3>
+                        <p class="text-n-graphite">Defining the roadmap for predictable, resilient growth across all digital channels.</p>
+                    </div>
+                    <div class="p-6 rounded-xl border border-p-teal/20 hover:border-p-teal transition duration-300 shadow-lg bg-s-sand">
+                        <h3 class="text-xl font-bold mb-3 text-p-teal">Channel Optimization</h3>
+                        <p class="text-n-graphite">Expert execution in SEO, PPC, and Paid Social to maximize visibility and conversion rate.</p>
+                    </div>
+                    <div class="p-6 rounded-xl border border-p-teal/20 hover:border-p-teal transition duration-300 shadow-lg bg-s-sand">
+                        <h3 class="text-xl font-bold mb-3 text-p-teal">Automation Consulting</h3>
+                        <p class="text-n-graphite">Building and integrating technology stacks to streamline lead nurturing and sales enablement.</p>
+                    </div>
+                    <div class="p-6 rounded-xl border border-p-teal/20 hover:border-p-teal transition duration-300 shadow-lg bg-s-sand">
+                        <h3 class="text-xl font-bold mb-3 text-p-teal">Tech Stack Optimization</h3>
+                        <p class="text-n-graphite">Auditing and refining existing MarTech tools for maximum performance and cost efficiency.</p>
+                    </div>
+                    <!-- End Service Loop Simulation -->
+                </div>
+                <div class="text-center mt-12">
+                    <a href="#contact" class="text-lg font-semibold text-p-teal border-b-2 border-a-lime hover:text-a-lime transition">
+                        View Full Capabilities & Pricing →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Case Studies (Our Work) - Enhanced Structure -->
+        <section id="work" class="py-20 md:py-28 bg-s-sand border-b border-p-teal/10">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title text-3xl md:text-4xl font-bold mb-12 text-center text-p-teal">Measurable Results. Industry Proof.</h2>
+                <p class="text-center text-n-graphite max-w-3xl mx-auto mb-10">We specialize in delivering predictable results for high-growth sectors: **Premium Education, E-Commerce, and Healthcare.**</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Case Study 1: Premium Education (New) -->
+                    <div class="p-6 rounded-xl shadow-2xl bg-bg-cream border-l-8 border-a-lime">
+                        <p class="text-lg font-semibold text-p-teal mb-2">Premium School Client: Shrewsbury International School</p>
+                        <h3 class="text-5xl font-extrabold text-n-graphite mb-4">+300% MQLs</h3>
+                        <p class="text-n-graphite/90">Developed and executed the GTM strategy for their India launch, driving a 300% increase in monthly qualified leads (MQLs) for admissions.</p>
+                        <a href="#" class="text-sm font-semibold text-a-lime hover:underline mt-3 block">View Full Story →</a>
+                    </div>
+
+                    <!-- Case Study 2: DTC E-Commerce (Updated to Jockey) -->
+                    <div class="p-6 rounded-xl shadow-2xl bg-bg-cream border-l-8 border-a-lime">
+                        <p class="text-lg font-semibold text-p-teal mb-2">DTC E-Commerce: Jockey</p>
+                        <h3 class="text-5xl font-extrabold text-n-graphite mb-4">15% ROI Lift</h3>
+                        <p class="text-n-graphite/90">Optimized Google and Social channels, driving a 15% lift in overall marketing ROI and achieving full fee payback in under **30 days**.</p>
+                        <a href="#" class="text-sm font-semibold text-a-lime hover:underline mt-3 block">View Full Story →</a>
+                    </div>
+
+                    <!-- Case Study 3: Healthcare/Wellness (Updated to Skinette Clinic) -->
+                    <div class="p-6 rounded-xl shadow-2xl bg-bg-cream border-l-8 border-a-lime">
+                        <p class="text-lg font-semibold text-p-teal mb-2">Healthcare Group: Skinette Clinic</p>
+                        <h3 class="text-5xl font-extrabold text-n-graphite mb-4">40% Time Saved</h3>
+                        <p class="text-n-graphite/90">Implemented full marketing automation, streamlining patient acquisition and reducing internal administrative time on data management by 40%.</p>
+                        <a href="#" class="text-sm font-semibold text-a-lime hover:underline mt-3 block">View Full Story →</a>
+                    </div>
+                    <!-- End Case Study Loop Simulation -->
+                </div>
+                <div class="text-center mt-16">
+                     <a href="#contact" class="cta-button inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-bold rounded-lg shadow-lg text-p-teal bg-a-lime hover:bg-a-lime/80 transition duration-300">
+                        Discuss Your Results Roadmap →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Team Expertise (Who We Are) -->
+        <section id="team" class="py-20 md:py-28 bg-bg-cream border-b border-p-teal/10">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Trust & Authority Section: Brands We've Helped Soar -->
+                <div class="bg-p-teal p-8 rounded-xl mb-16 shadow-2xl">
+                    <div class="grid grid-cols-1 md:grid-cols-3 items-center">
+                        <div class="md:col-span-1 text-center md:text-left mb-6 md:mb-0">
+                            <p class="text-base font-semibold uppercase tracking-widest text-a-lime mb-2">
+                                Data-Driven Performance
+                            </p>
+                            <h3 class="text-4xl font-extrabold text-bg-cream leading-tight">
+                                Brands We've Helped Soar
+                            </h3>
+                            <p class="text-s-sand text-sm mt-3">
+                                We've successfully grown **over 500 brands** across high-growth industries.
+                            </p>
+                        </div>
+                        
+                        <!-- Simulated Client Logos Grid - UPDATED LIST -->
+                        <div class="md:col-span-2 grid grid-cols-3 sm:grid-cols-4 gap-x-6 gap-y-8 md:gap-x-10 md:gap-y-12 items-center justify-items-center">
+                            <!-- Logos should be highly contrasted (White/Light Gray) against the dark Teal background -->
+                            <span class="text-xl font-bold text-s-sand/80 opacity-90 hover:opacity-100 transition">Jockey</span>
+                            <span class="text-xl font-bold text-s-sand/80 opacity-90 hover:opacity-100 transition">IDP</span>
+                            <span class="text-xl font-bold text-s-sand/80 opacity-90 hover:opacity-100 transition">Hersheys</span>
+                            <span class="text-xl font-bold text-s-sand/80 opacity-90 hover:opacity-100 transition">Skientte</span>
+                            <span class="text-xl font-bold text-s-sand/80 opacity-90 hover:opacity-100 transition">Kasiga School</span>
+                            <span class="text-xl font-bold text-s-sand/80 opacity-90 hover:opacity-100 transition">Shrewsbery</span>
+                            <span class="text-xl font-bold text-s-sand/80 opacity-90 hover:opacity-100 transition">Red Bull</span>
+                            <span class="text-xl font-bold text-s-sand/80 opacity-90 hover:opacity-100 transition">eHarmony</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <h2 class="section-title text-3xl md:text-4xl font-bold mb-12 text-center text-p-teal">The Experts Behind The Acceleration.</h2>
+                <p class="text-center text-n-graphite max-w-3xl mx-auto mb-10">Our team isn't just experienced—they're practitioners in Strategy, Design, Technology, and Data, focused on solving your most complex problems.</p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                    <!-- Start Team Member Loop Simulation -->
+                    <div class="p-6 rounded-xl bg-s-sand border border-p-teal/50">
+                        <p class="text-3xl mb-4 text-p-teal">🧠</p>
+                        <h3 class="text-xl font-bold text-p-teal">Dr. Elena Varga</h3>
+                        <p class="text-md font-semibold text-n-graphite mb-3">Chief Strategy Officer (CSO)</p>
+                        <p class="text-n-graphite mb-3 border-t border-p-teal/20 pt-3"><span class="font-bold text-p-teal">Focus:</span> Gen AI Application & Behavioral Economics</p>
+                        <p class="text-sm text-n-graphite">Drives the strategic vision, ensuring every client project delivers a 10-25% increase in marketing ROI within the first 6 months. Focuses on data-backed, resilient growth models.</p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-s-sand border border-p-teal/50">
+                        <p class="text-3xl mb-4 text-p-teal">💻</p>
+                        <h3 class="text-xl font-bold text-p-teal">Alex Chen</h3>
+                        <p class="text-md font-semibold text-n-graphite mb-3">VP of Digital Technology</p>
+                        <p class="text-n-graphite mb-3 border-t border-p-teal/20 pt-3"><span class="font-bold text-p-teal">Focus:</span> Full Stack MarTech Optimization</p>
+                        <p class="text-sm text-n-graphite">Specializes in integrating complex tech stacks (e.g., Salesforce, HubSpot, custom APIs) to achieve 360-degree customer visibility and reduce data management time by up to 40%.</p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-s-sand border border-p-teal/50">
+                        <p class="text-3xl mb-4 text-p-teal">📊</p>
+                        <h3 class="text-xl font-bold text-p-teal">Maya Singh</h3>
+                        <p class="text-md font-semibold text-n-graphite mb-3">Director of Data & Analytics</p>
+                        <p class="text-n-graphite mb-3 border-t border-p-teal/20 pt-3"><span class="font-bold text-p-teal">Focus:</span> Predictive Modeling & KPI Alignment</p>
+                        <p class="text-sm text-n-graphite">Leads the process of identifying high-value KPIs, transforming raw data into clear, actionable insights for campaign effectiveness and ensuring quick payback on agency fees.</p>
+                    </div>
+                    <!-- End Team Member Loop Simulation -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Resources & Lead Magnet -->
+        <section id="resources" class="py-20 md:py-28 bg-s-sand border-b border-p-teal/10 text-center">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title text-3xl md:text-4xl font-bold mb-6 mx-auto text-p-teal">Access Our Proprietary Insights.</h2>
+                <p class="text-lg text-n-graphite max-w-3xl mx-auto mb-8">Download our free, niche-centric guide: **"The 7-Figure Marketing Roadmap for Schools"** to kickstart your growth strategy.</p>
+                
+                <a href="#contact" class="cta-button inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-bold rounded-lg shadow-lg text-bg-cream bg-p-teal hover:bg-p-teal/80 transition duration-300">
+                    Download Free Guide & Join Community →
+                </a>
+            </div>
+        </section>
+        
+        <!-- 7. Contact / Lead Capture Form -->
+        <section id="contact" class="py-20 md:py-28 bg-bg-cream">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+                <h2 class="section-title text-3xl md:text-4xl font-bold mb-4 text-center text-p-teal">Ready to Guarantee Your Growth?</h2>
+                <p class="text-center text-n-graphite mb-10">Fill out the form below to initiate your **Digital Acceleration Session**. We'll outline your customized Marketing Roadmap within 48 hours. <br> Or call us directly: **(880) 093-6344**</p>
+
+                <div id="form-container" class="bg-s-sand p-8 md:p-12 rounded-xl shadow-2xl border border-p-teal">
+                    <form id="lead-form" class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <!-- Required fields -->
+                        <div><label class="block text-sm font-medium text-p-teal mb-1" for="first_name">First Name *</label><input type="text" id="first_name" name="first_name" required class="w-full px-4 py-2 border border-n-graphite/50 rounded-lg bg-bg-cream text-n-graphite focus:ring-p-teal focus:border-p-teal"></div>
+                        <div><label class="block text-sm font-medium text-p-teal mb-1" for="last_name">Last Name *</label><input type="text" id="last_name" name="last_name" required class="w-full px-4 py-2 border border-n-graphite/50 rounded-lg bg-bg-cream text-n-graphite focus:ring-p-teal focus:border-p-teal"></div>
+                        <div><label class="block text-sm font-medium text-p-teal mb-1" for="email">Work Email *</label><input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-n-graphite/50 rounded-lg bg-bg-cream text-n-graphite focus:ring-p-teal focus:border-p-teal"></div>
+                        <div><label class="block text-sm font-medium text-p-teal mb-1" for="phone">Phone Number *</label><input type="tel" id="phone" name="phone" required class="w-full px-4 py-2 border border-n-graphite/50 rounded-lg bg-bg-cream text-n-graphite focus:ring-p-teal focus:border-p-teal"></div>
+                        <div><label class="block text-sm font-medium text-p-teal mb-1" for="job_title">Job Title *</label><input type="text" id="job_title" name="job_title" required class="w-full px-4 py-2 border border-n-graphite/50 rounded-lg bg-bg-cream text-n-graphite focus:ring-p-teal focus:border-p-teal"></div>
+                        <div><label class="block text-sm font-medium text-p-teal mb-1" for="company">Company Name *</label><input type="text" id="company" name="company" required class="w-full px-4 py-2 border border-n-graphite/50 rounded-lg bg-bg-cream text-n-graphite focus:ring-p-teal focus:border-p-teal"></div>
+                        <div class="sm:col-span-2">
+                            <label class="block text-sm font-medium text-p-teal mb-1" for="country">Country *</label>
+                            <select id="country" name="country" required class="w-full px-4 py-2 border border-n-graphite/50 rounded-lg bg-bg-cream text-n-graphite focus:ring-p-teal focus:border-p-teal">
+                                <option value="">Select Country</option>
+                                <option value="US">United States</option>
+                                <option value="CA">Canada</option>
+                                <option value="GB">United Kingdom</option>
+                                <option value="AU">Australia</option>
+                                <option value="OT">Other</option>
+                            </select>
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label class="block text-sm font-medium text-p-teal mb-1" for="help_text">How can we help? (Specific Challenge) *</label>
+                            <textarea id="help_text" name="help_text" rows="4" required class="w-full px-4 py-2 border border-n-graphite/50 rounded-lg bg-bg-cream text-n-graphite focus:ring-p-teal focus:border-p-teal"></textarea>
+                        </div>
+                        <div class="sm:col-span-2">
+                            <button type="submit" class="cta-button w-full px-6 py-3 border border-transparent text-lg font-bold rounded-xl shadow-lg text-p-teal bg-a-lime hover:bg-a-lime/80 transition duration-300 transform hover:scale-[1.01]">
+                                Submit Request
+                            </button>
+                        </div>
+                        <p class="sm:col-span-2 text-xs text-n-graphite/70 mt-2 text-center">
+                            By submitting, you agree to our <a href="#" class="underline hover:text-p-teal">Privacy Policy</a> and <a href="#" class="underline hover:text-p-teal">Terms of Use</a>.
+                        </p>
+                    </form>
+                </div>
+
+                <!-- Success Message Modal -->
+                <div id="success-message" class="hidden fixed inset-0 bg-n-graphite/70 flex items-center justify-center p-4 z-[9999]">
+                    <div class="bg-s-sand p-8 rounded-xl max-w-md w-full shadow-2xl border-t-4 border-a-lime">
+                        <h3 class="text-3xl font-bold text-p-teal mb-4">Request Sent! ✅</h3>
+                        <p class="text-n-graphite mb-6">Thank you for requesting a Digital Acceleration Session. Your data has been successfully aligned with our simulated CRM/Analytics system. We will be in touch within 48 hours!</p>
+                        <button onclick="document.getElementById('success-message').classList.add('hidden')" class="w-full px-4 py-2 bg-p-teal text-bg-cream font-bold rounded-lg hover:bg-p-teal/90 transition">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer: Detailed, Multi-Column Structure -->
+    <footer class="bg-p-teal py-16 text-bg-cream">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- NEW: Four Equal Columns (Navigation and Contact - TOP SECTION) -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12 pb-10 mb-10 border-b border-p-teal/50">
+                
+                <!-- Column 1: Services & Work -->
+                <div>
+                    <h4 class="text-lg font-bold text-bg-cream mb-4">Services & Work</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#services" class="text-s-sand hover:text-a-lime transition">Digital Strategy</a></li>
+                        <li><a href="#services" class="text-s-sand hover:text-a-lime transition">Channel Optimization (SEO/PPC/SOCIAL)</a></li>
+                        <li><a href="#services" class="text-s-sand hover:text-a-lime transition">Conversion Rate Optimization</a></li>
+                        <li><a href="#" class="text-s-sand hover:text-a-lime transition">Industry Specialization</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: Company & Resources -->
+                <div>
+                    <h4 class="text-lg font-bold text-bg-cream mb-4">Company & Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#team" class="text-s-sand hover:text-a-lime transition">Who We Are</a></li>
+                        <li><a href="#" class="text-s-sand hover:text-a-lime transition">Our Core Values</a></li>
+                        <li><a href="#" class="text-s-sand hover:text-a-lime transition">Careers</a></li>
+                        <li><a href="#" class="text-s-sand hover:text-a-lime transition">Blog & Insights</a></li>
+                        <li><a href="#" class="text-s-sand hover:text-a-lime transition">Free Guides & Assets</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Office & Contact -->
+                <div>
+                    <h4 class="text-lg font-bold text-bg-cream mb-4">Office & Contact</h4>
+                    <address class="text-s-sand text-sm not-italic mb-2">
+                        1074 Broadway,
+                        <br>
+                        Woodmere, NY
+                        <br>
+                        11598
+                    </address>
+                    <p class="text-s-sand text-lg font-bold">
+                        <a href="tel:8800936344" class="hover:text-a-lime transition">(880) 093-6344</a>
+                    </p>
+                </div>
+                
+                <!-- Column 4: Legal & Support -->
+                <div>
+                    <h4 class="text-lg font-bold text-bg-cream mb-4">Legal & Support</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#contact" class="text-s-sand hover:text-a-lime transition">Request a Quote</a></li>
+                        <li><a href="#" class="text-s-sand hover:text-a-lime transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-s-sand hover:text-a-lime transition">Terms of Use</a></li>
+                        <li><a href="#" class="text-s-sand hover:text-a-lime transition">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Logo, Copyright, and Social Block (BOTTOM SECTION) -->
+            <div>
+                <a href="#home" class="text-3xl font-extrabold tracking-tight text-bg-cream">
+                    Chotu Labs<span class="text-a-lime">.</span>
+                </a>
+                <p class="text-xs text-s-sand leading-relaxed max-w-xs pt-4">
+                    &copy; 2025 Chotu Labs Marketing LLC. All Rights Reserved.
+                </p>
+                <div class="flex space-x-4 text-xl text-s-sand pt-4">
+                    <!-- Simulated Social Icons -->
+                    <a href="#" aria-label="YouTube" class="hover:text-a-lime transition duration-200">YT</a> 
+                    <a href="#" aria-label="LinkedIn" class="hover:text-a-lime transition duration-200">IN</a>
+                    <a href="#" aria-label="Facebook" class="hover:text-a-lime transition duration-200">FB</a>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+
+
+    <script>
+        // --- Conversion Optimization & Form Submission JS ---
+        
+        // 1. Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.getElementById('mobile-menu').querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // 2. Form Submission Logic (Modified for static preview for aesthetic testing)
+        const form = document.getElementById('lead-form');
+        const successMessage = document.getElementById('success-message');
+
+        form.addEventListener('submit', async function(event) {
+            event.preventDefault();
+            
+            // NOTE: In the live Python app, this posts to /submit_lead.
+            // For this static preview, we simulate success immediately.
+
+            const submitButton = form.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
+            
+            submitButton.textContent = 'Simulating Submission...';
+            submitButton.disabled = true;
+
+            // Simulate network delay
+            setTimeout(() => {
+                form.reset();
+                successMessage.classList.remove('hidden');
+
+                // Restore button state after modal is shown
+                submitButton.textContent = originalButtonText;
+                submitButton.disabled = false;
+            }, 1000);
+        });
+    </script>
+
+</body>
+</html>
