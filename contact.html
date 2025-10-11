@@ -65,7 +65,19 @@
                     Schedule Digital Acceleration Session
                 </a>
             </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="sm:hidden text-bg-cream focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
         </nav>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden sm:hidden bg-p-teal border-t border-s-sand/20">
+            <a href="index.html" class="block px-4 py-3 text-s-sand hover:bg-p-teal/90 transition">Home</a>
+            <a href="services_work.html" class="block px-4 py-3 text-s-sand hover:bg-p-teal/90 transition">Services & Work</a>
+            <a href="our_work.html" class="block px-4 py-3 text-s-sand hover:bg-p-teal/90 transition">Our Work</a>
+            <a href="company_resources.html" class="block px-4 py-3 text-s-sand hover:bg-p-teal/90 transition">Expertise & Resources</a>
+            <a href="#contact-form" class="block px-4 py-3 text-p-teal bg-a-lime hover:bg-a-lime/80 transition font-bold">Schedule Digital Acceleration Session</a>
+        </div>
     </header>
 
     <main>
@@ -96,6 +108,9 @@
                     <!-- Formspree Integrated Form -->
                     <form id="lead-form" method="POST" action="https://formspree.io/f/xqayyjko" class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         
+                        <!-- Honeypot for spam protection -->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="_gotcha"></div>
+
                         <!-- Name Fields -->
                         <div>
                             <label for="first_name" class="block text-sm font-medium text-n-graphite mb-1">First Name*</label>
@@ -225,20 +240,61 @@
         </div>
     </footer>
     
-    <!-- JavaScript for Form Success Handling (Formspree often redirects, but this ensures a clean UI flow) -->
+    <!-- JavaScript for Mobile Menu and Form Submission -->
     <script>
-        document.getElementById('lead-form').addEventListener('submit', function(e) {
-            // Since Formspree handles the POST, this prevents client-side processing,
-            // but we can add a simple message display here if Formspree redirects back.
-            // For production, Formspree handles the success page/message via their settings.
-            setTimeout(() => {
-                const form = document.getElementById('lead-form');
-                if (form) {
-                    // Simulates a clean success state after submission (which Formspree would handle via redirect)
-                    // The actual success handling is done by Formspree's redirect or AJAX response.
-                    console.log("Form submission initiated to Formspree endpoint.");
+        // 1. Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // 2. Close mobile menu on anchor link click
+        document.getElementById('mobile-menu').querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                // Check if the link is an anchor link (starts with #)
+                if (link.getAttribute('href').startsWith('#')) {
+                    document.getElementById('mobile-menu').classList.add('hidden');
                 }
-            }, 100);
+            });
+        });
+
+        // 3. Form Submission (Client-side handling for Formspree)
+        // Note: Formspree handles the POST. This JS prevents the default HTML redirect
+        // and provides a smoother client-side experience.
+        const form = document.getElementById('lead-form');
+        form.addEventListener('submit', async function(event) {
+            event.preventDefault();
+            
+            const submitButton = form.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
+            
+            submitButton.textContent = 'Submitting...';
+            submitButton.disabled = true;
+
+            const formAction = form.getAttribute('action');
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch(formAction, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    alert('✅ Success! Your request has been received. We will be in touch within 48 hours.');
+                    form.reset(); // Reset form fields on success
+                } else {
+                    alert('Submission failed. Please try again.');
+                }
+            } catch (error) {
+                console.error('Network or Fetch Error:', error);
+                alert('A network error occurred. Please try again.');
+            } finally {
+                submitButton.textContent = originalButtonText;
+                submitButton.disabled = false;
+            }
         });
     </script>
 
