@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lab Notes | Exclusive Resources & Insights</title>
+    <!-- Tailwind CSS CDN and Custom Configuration -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // New Color Palette
+                        'p-teal': '#004E64',         // Primary: Midnight Teal
+                        's-sand': '#E3DCC2',         // Secondary: Warm Sand (Card/Form background)
+                        'a-lime': '#C5E86C',         // Accent: Bright Lime (CTA/Highlight)
+                        'n-graphite': '#3A3A3A',     // Neutral: Graphite Gray (Body Text)
+                        'bg-cream': '#FAFAF5',       // Background: Cream White
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #FAFAF5; 
+            color: #3A3A3A; /* Graphite Gray */
+        }
+        .cta-button {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(197, 232, 108, 0.7); /* Bright Lime shadow */
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #C5E86C; /* Bright Lime */
+            margin-top: 8px;
+            border-radius: 9999px;
+        }
+        .blog-card {
+            transition: all 0.3s ease;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 78, 100, 0.15); /* Subtle teal shadow */
+        }
+        .metric-icon { display: inline-block; width: 1.2rem; height: 1.2rem; background-color: currentColor; -webkit-mask-size: cover; mask-size: cover; vertical-align: middle; margin-right: 0.25rem; }
+        .icon-eye { -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z'%3E%3C/path%3E%3Ccircle cx='12' cy='12' r='3'%3E%3C/circle%3E%3C/svg%3E"); mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z'%3E%3C/path%3E%3Ccircle cx='12' cy='12' r='3'%3E%3C/circle%3E%3C/svg%3E"); }
+        .icon-share { -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8'%3E%3C/path%3E%3Cpolyline points='16 6 12 2 8 6'%3E</polyline><line x1='12' y1='2' x2='12' y2='15'%3E</line></svg>"); mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8'%3E%3C/path%3E%3Cpolyline points='16 6 12 2 8 6'%3E</polyline><line x1='12' y1='2' x2='12' y2='15'%3E</line></svg>"); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation (Global Header) -->
+    <header class="sticky top-0 z-50 bg-p-teal shadow-xl">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-extrabold tracking-tight text-bg-cream">
+                Chotu Labs<span class="text-a-lime">.</span>
+            </a>
+            <div class="hidden sm:flex space-x-6 text-sm font-medium">
+                <!-- Navigation links pointing to sections or other (future) pages -->
+                <a href="index.html" class="text-s-sand hover:text-a-lime transition">Home</a>
+                <a href="services_work.html" class="text-s-sand hover:text-a-lime transition">Services</a>
+                <a href="our_work.html" class="text-s-sand hover:text-a-lime transition">Our Work</a>
+                <a href="#top" class="text-a-lime font-bold transition">The Lab Notes</a>
+                <a href="contact.html" class="px-4 py-2 bg-a-lime text-p-teal font-bold rounded-lg hover:bg-a-lime/80 transition cta-button">
+                    Schedule Digital Acceleration Session
+                </a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="sm:hidden text-bg-cream focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden sm:hidden bg-p-teal border-t border-s-sand/20">
+            <a href="index.html" class="block px-4 py-3 text-s-sand hover:bg-p-teal/90 transition">Home</a>
+            <a href="services_work.html" class="block px-4 py-3 text-s-sand hover:bg-p-teal/90 transition">Services & Work</a>
+            <a href="our_work.html" class="block px-4 py-3 text-s-sand hover:bg-p-teal/90 transition">Our Work</a>
+            <a href="#top" class="block px-4 py-3 text-a-lime font-bold hover:bg-p-teal/90 transition">The Lab Notes</a>
+            <a href="contact.html" class="block px-4 py-3 text-p-teal bg-a-lime hover:bg-a-lime/80 transition font-bold">Schedule Digital Acceleration Session</a>
+        </div>
+    </header>
+
+    <main class="bg-bg-cream" id="top">
+        <!-- Page Hero Header -->
+        <section class="pt-24 pb-16 md:pt-32 md:pb-20 text-center bg-bg-cream border-b border-p-teal/10">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h1 class="text-5xl sm:text-6xl font-extrabold leading-tight mb-4 text-p-teal">
+                    The Lab Notes
+                </h1>
+                <p class="text-xl md:text-2xl text-n-graphite max-w-4xl mx-auto">
+                    Exclusive resources and strategic insights for digital leaders focused on driving <strong>predictable, resilient growth.</strong>
+                </p>
+            </div>
+        </section>
+
+        <!-- Article Grid / Content Listing -->
+        <section id="article-list" class="py-20 md:py-28 bg-s-sand border-b border-p-teal/10">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+                
+                <h2 class="section-title text-3xl md:text-4xl font-bold mb-12 text-center text-p-teal mx-auto">Latest Intelligence from Our Strategy Team</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    
+                    <!-- Blog Card 1: MMM (Most Recent) -->
+                    <a href="why-marketing-mix-modeling-mmm-is-making-a-comeback-in-2026.html" class="blog-card bg-bg-cream rounded-xl shadow-lg border border-p-teal/10 overflow-hidden block">
+                        <!-- Featured Image Placeholder -->
+                        <div class="h-48 w-full bg-p-teal/20" style="background-image: url('https://placehold.co/600x300/004E64/C5E86C?text=MMM+Attribution'); background-size: cover; background-position: center;"></div>
+                        
+                        <div class="p-6">
+                            <p class="text-sm font-semibold tracking-widest uppercase text-p-teal mb-2">Strategy & Measurement</p>
+                            <h3 class="text-2xl font-bold text-n-graphite mb-3 leading-snug">Why Marketing Mix Modeling (MMM) is Making a Comeback in 2026</h3>
+                            
+                            <p class="text-n-graphite/80 text-sm mb-4">
+                                MMM is emerging as the only reliable, privacy-compliant way to measure marketing effectiveness, replacing broken user-level tracking.
+                            </p>
+
+                            <!-- Metrics and Read Level -->
+                            <div class="flex justify-between items-center text-sm font-semibold border-t border-s-sand pt-4">
+                                <div class="flex space-x-4 text-p-teal">
+                                    <span class="text-xs">
+                                        <span class="metric-icon icon-eye"></span> 28,000 Views
+                                    </span>
+                                    <span class="text-xs">
+                                        <span class="metric-icon icon-share"></span> 5,000 Shares
+                                    </span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-n-graphite text-xs">15 min read</span>
+                                    <span class="text-xs px-2 py-0.5 bg-a-lime text-p-teal rounded-full font-extrabold tracking-tight">ADVANCED</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Blog Card 2: GEO -->
+                    <a href="generative-engine-optimization-geo-new-rules-of-search-2026.html" class="blog-card bg-bg-cream rounded-xl shadow-lg border border-p-teal/10 overflow-hidden block">
+                        <!-- Featured Image Placeholder -->
+                        <div class="h-48 w-full bg-p-teal/20" style="background-image: url('https://placehold.co/600x300/004E64/C5E86C?text=GEO+AI+Search'); background-size: cover; background-position: center;"></div>
+                        
+                        <div class="p-6">
+                            <p class="text-sm font-semibold tracking-widest uppercase text-p-teal mb-2">Search & Technology</p>
+                            <h3 class="text-2xl font-bold text-n-graphite mb-3 leading-snug">Generative Engine Optimization (GEO): The New Rules of Search in 2026</h3>
+                            
+                            <p class="text-n-graphite/80 text-sm mb-4">
+                                The future of visibility is defined by citation, not just clicks. Learn the strategic pillars for optimizing content for Google AI Overviews and ChatGPT.
+                            </p>
+
+                            <!-- Metrics and Read Level -->
+                            <div class="flex justify-between items-center text-sm font-semibold border-t border-s-sand pt-4">
+                                <div class="flex space-x-4 text-p-teal">
+                                    <span class="text-xs">
+                                        <span class="metric-icon icon-eye"></span> 24,190 Views
+                                    </span>
+                                    <span class="text-xs">
+                                        <span class="metric-icon icon-share"></span> 4,850 Shares
+                                    </span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-n-graphite text-xs">12 min read</span>
+                                    <span class="text-xs px-2 py-0.5 bg-a-lime text-p-teal rounded-full font-extrabold tracking-tight">ADVANCED</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Blog Card 3: E-Commerce -->
+                    <a href="ecommerce-zero-cost-strategy-15-percent-roi-lift.html" class="blog-card bg-bg-cream rounded-xl shadow-lg border border-p-teal/10 overflow-hidden block">
+                        <!-- Featured Image Placeholder -->
+                        <div class="h-48 w-full bg-p-teal/20" style="background-image: url('https://placehold.co/600x300/004E64/C5E86C?text=E-COMMERCE+CRO'); background-size: cover; background-position: center;"></div>
+                        
+                        <div class="p-6">
+                            <p class="text-sm font-semibold tracking-widest uppercase text-p-teal mb-2">E-Commerce & CRO</p>
+                            <h3 class="text-2xl font-bold text-n-graphite mb-3 leading-snug">E-Commerce: The $0 Cost Strategy to Drive 15% ROI Lift Today</h3>
+                            
+                            <p class="text-n-graphite/80 text-sm mb-4">
+                                Unlock latent revenue by fixing friction points in your existing checkout funnel using strategic, zero-cost conversion rate optimization (CRO) tactics.
+                            </p>
+
+                            <!-- Metrics and Read Level -->
+                            <div class="flex justify-between items-center text-sm font-semibold border-t border-s-sand pt-4">
+                                <div class="flex space-x-4 text-p-teal">
+                                    <span class="text-xs">
+                                        <span class="metric-icon icon-eye"></span> 18,452 Views
+                                    </span>
+                                    <span class="text-xs">
+                                        <span class="metric-icon icon-share"></span> 3,120 Shares
+                                    </span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-n-graphite text-xs">10 min read</span>
+                                    <span class="text-xs px-2 py-0.5 bg-a-lime text-p-teal rounded-full font-extrabold tracking-tight">INTERMEDIATE</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Placeholder/Gated Content Card -->
+                    <a href="contact.html" class="blog-card bg-bg-cream rounded-xl shadow-lg border border-p-teal/10 overflow-hidden block p-6 flex flex-col justify-center text-center">
+                         <h3 class="text-2xl font-bold text-p-teal mb-3 leading-snug">
+                            Download Our Full Strategic Guide: The Algorithmic Resilience Framework
+                        </h3>
+                        <p class="text-n-graphite/80 text-sm mb-4">
+                            Gain access to our exclusive whitepaper on navigating the next 5 years of algorithm volatility.
+                        </p>
+                        <span class="cta-button inline-flex items-center justify-center px-6 py-3 mt-4 border border-transparent text-base font-bold rounded-lg shadow-lg text-p-teal bg-a-lime hover:bg-a-lime/80 transition duration-300 mx-auto">
+                            Get Free Guide →
+                        </span>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Global CTA Section -->
+        <section id="global-cta" class="py-20 bg-p-teal text-bg-cream text-center">
+            <h2 class="text-4xl font-extrabold mb-4">Ready to Accelerate Your Growth?</h2>
+            <p class="text-xl mb-6">Schedule your session to start building your customized Marketing Roadmap today.</p>
+            <a href="contact.html" class="cta-button inline-flex items-center justify-center px-10 py-4 border border-transparent text-lg font-bold rounded-xl shadow-2xl shadow-a-lime/60 text-p-teal bg-a-lime hover:bg-a-lime/80 transition duration-300 transform hover:scale-[1.03]">
+                Schedule Digital Acceleration Session NOW!
+            </a>
+        </section>
+
+    </main>
+    
+    <!-- Footer: Detailed, Multi-Column Structure (Global Footer) -->
+    <footer class="bg-p-teal py-16 text-bg-cream">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Four Equal Columns (Navigation and Contact) -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12 pb-10 mb-10 border-b border-p-teal/50">
+                
+                <!-- Column 1: Services & Work -->
+                <div>
+                    <h4 class="text-lg font-bold text-bg-cream mb-4">Services & Work</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="services_work.html#strategy-dominance" class="text-s-sand hover:text-a-lime transition">Digital Strategy</a></li>
+                        <li><a href="services_work.html#services-grid" class="text-s-sand hover:text-a-lime transition">Channel Optimization (SEO/PPC/SOCIAL)</a></li>
+                        <li><a href="services_work.html#services-grid" class="text-s-sand hover:text-a-lime transition">Conversion Rate Optimization</a></li>
+                        <li><a href="our_work.html#work" class="text-s-sand hover:text-a-lime transition">Industry Specialization</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: Company & Resources -->
+                <div>
+                    <h4 class="text-lg font-bold text-bg-cream mb-4">Company & Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="company_resources.html#team" class="text-s-sand hover:text-a-lime transition">Who We Are</a></li>
+                        <li><a href="#" class="text-s-sand hover:text-a-lime transition">Our Core Values</a></li>
+                        <li><a href="#" class="text-s-sand hover:text-a-lime transition">Careers</a></li>
+                        <li><a href="#article-list" class="text-a-lime transition">Blog & Insights</a></li>
+                        <li><a href="#article-list" class="text-s-sand hover:text-a-lime transition">Free Guides & Assets</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Office & Contact -->
+                <div>
+                    <h4 class="text-lg font-bold text-bg-cream mb-4">Office & Contact</h4>
+                    <address class="text-s-sand text-sm not-italic mb-2">
+                        1074 Broadway,
+                        <br>
+                        Woodmere, NY
+                        <br>
+                        11598
+                    </address>
+                    <p class="text-s-sand text-lg font-bold">
+                        <a href="tel:8800936344" class="hover:text-a-lime transition">(880) 093-6344</a>
+                    </p>
+                </div>
+
+                <!-- Column 4: Legal & Support -->
+                <div>
+                    <h4 class="text-lg font-bold text-bg-cream mb-4">Legal & Support</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="contact.html" class="text-s-sand hover:text-a-lime transition">Request a Quote</a></li>
+                        <li><a href="#" class="text-s-sand hover:text-a-lime transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-s-sand hover:text-a-lime transition">Terms of Use</a></li>
+                        <li><a href="#" class="text-s-sand hover:text-a-lime transition">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Logo, Copyright, and Social Block (BOTTOM SECTION) -->
+            <div>
+                <a href="index.html" class="text-3xl font-extrabold tracking-tight text-bg-cream">
+                    Chotu Labs<span class="text-a-lime">.</span>
+                </a>
+                <p class="text-xs text-s-sand leading-relaxed max-w-xs pt-4">
+                    &copy; 2025 Chotu Labs Marketing LLC. All Rights Reserved.
+                </p>
+                <div class="flex space-x-4 text-xl text-s-sand pt-4">
+                    <!-- Simulated Social Icons -->
+                    <a href="#" aria-label="YouTube" class="hover:text-a-lime transition duration-200">YT</a> 
+                    <a href="#" aria-label="LinkedIn" class="hover:text-a-lime transition duration-200">IN</a>
+                    <a href="#" aria-label="Facebook" class="hover:text-a-lime transition duration-200">FB</a>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        // --- 1. Mobile Menu Toggle Script (REQUIRED FOR MOBILE HEADER) ---
+        
+        // 1. Mobile Menu Toggle: Toggles the 'hidden' class on the mobile menu div.
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // 2. Close mobile menu on anchor link click: Ensures menu closes if navigating to a section on the same page.
+        document.getElementById('mobile-menu').querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                // Check if the link is an anchor link (starts with #)
+                if (link.getAttribute('href').startsWith('#')) {
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+
+        // --- 2. Dynamic Metrics Simulation (For the list, to show varying numbers) ---
+
+        function formatNumber(num) {
+            if (num >= 1000) {
+                return (num / 1000).toFixed(1) + 'K';
+            }
+            return Math.floor(num).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+
+        function getInitialMetrics(key) {
+            const defaultMetrics = {
+                'mmm-blog': { views: 28000, shares: 5000 },
+                'geo-blog': { views: 24190, shares: 4850 },
+                'ecommerce-blog': { views: 18452, shares: 3120 }
+            };
+            const savedData = localStorage.getItem(key);
+            if (savedData) {
+                return JSON.parse(savedData);
+            }
+            return defaultMetrics['mmm-blog']; // Fallback
+        }
+
+        // We could run a script here to dynamically update the metric spans on the Lab Notes page, 
+        // but since we don't have a shared database (or JSON file yet), we will rely on static mock-ups for now.
+    </script>
+</body>
+</html>
