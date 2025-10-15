@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generative Engine Optimization (GEO): The New Rules of Search in 2026</title>
+    <!-- SEO Snippet -->
+    <meta name="description" content="Generative Engine Optimization (GEO) is defining search visibility in 2026. Learn the strategic pillars, new KPIs (AIGVR, SRS), and actionable content tactics needed to get cited by ChatGPT, Copilot, and Google AI Overviews.">
+
+    <!-- Tailwind CSS CDN and Custom Configuration -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // New Color Palette
+                        'p-teal': '#004E64',         // Primary: Midnight Teal
+                        's-sand': '#E3DCC2',         // Secondary: Warm Sand (Card/Form background)
+                        'a-lime': '#C5E86C',         // Accent: Bright Lime (CTA/Highlight)
+                        'n-graphite': '#3A3A3A',     // Neutral: Graphite Gray (Body Text)
+                        'bg-cream': '#FAFAF5',       // Background: Cream White
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #FAFAF5; 
+            color: #3A3A3A; /* Graphite Gray */
+        }
+        .cta-button {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(197, 232, 108, 0.7); /* Bright Lime shadow */
+        }
+        .article-content h2 {
+            /* Added IDs for jump links */
+            scroll-margin-top: 6rem; 
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700; /* font-bold */
+            color: #004E64; /* p-teal */
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #C5E86C; /* a-lime underline */
+        }
+        .article-content h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 600; /* font-semibold */
+            color: #004E64; /* p-teal */
+        }
+        .article-content p {
+            margin-bottom: 1.25rem;
+            line-height: 1.75;
+        }
+        .article-content ul, .article-content ol {
+            margin-bottom: 1.25rem;
+            padding-left: 1.5rem;
+        }
+        .article-content ul li {
+            list-style-type: disc;
+            margin-bottom: 0.5rem;
+        }
+        .article-content ol li {
+            list-style-type: decimal;
+            margin-bottom: 0.5rem;
+        }
+        /* Custom class for the placeholder hero image */
+        .hero-banner-placeholder {
+            background-image: linear-gradient(135deg, rgba(0, 78, 100, 0.9), rgba(0, 78, 100, 0.5)), url('https://placehold.co/1200x300/004E64/C5E86C?text=AI+NETWORK+VISUAL'); /* Placeholder for a tech-relevant image */
+            background-size: cover;
+            background-position: center;
+        }
+        /* Drop Cap/First Letter Styling */
+        .first-letter {
+            float: left;
+            font-size: 4.5rem; /* Large size */
+            line-height: 1;
+            margin-right: 0.5rem;
+            font-weight: 900; /* Extra bold */
+            color: #004E64; /* Primary Teal color */
+            padding-top: 0.25rem;
+        }
+        /* New TOC Styling */
+        .toc-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 1rem 0;
+            border-right: 1px solid #E3DCC2; /* Subtle divider */
+            transition: background-color 0.2s;
+        }
+        .toc-item:hover {
+            background-color: #FAFAF5; /* bg-cream hover effect */
+        }
+        .toc-item-number {
+            font-size: 2.25rem; /* text-3xl */
+            font-weight: 800; /* font-extrabold */
+            color: #E3DCC2; /* Light gray counter */
+            line-height: 1;
+            margin-right: 1rem;
+        }
+        .toc-item-text {
+             font-weight: 600;
+             line-height: 1.4;
+             color: #3A3A3A;
+        }
+        /* Remove border on the last item in a row */
+        @media (min-width: 768px) {
+            .toc-grid .toc-item:nth-child(3n) {
+                border-right: none;
+            }
+            .toc-grid .toc-item {
+                 padding-right: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation (Global Header) -->
+    <header class="sticky top-0 z-50 bg-p-teal shadow-xl">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-extrabold tracking-tight text-bg-cream">
+                Chotu Labs<span class="text-a-lime">.</span>
+            </a>
+            <div class="hidden sm:flex space-x-6 text-sm font-medium">
+                <!-- Navigation links pointing to sections or other (future) pages -->
+                <a href="index.html" class="text-s-sand hover:text-a-lime transition">Home</a>
+                <a href="services_work.html" class="text-s-sand hover:text-a-lime transition">Services</a>
+                <a href="our_work.html" class="text-s-sand hover:text-a-lime transition">Our Work</a>
+                <a href="company_resources.html" class="text-a-lime font-bold transition">Expertise & Resources</a>
+                <a href="contact.html" class="px-4 py-2 bg-a-lime text-p-teal font-bold rounded-lg hover:bg-a-lime/80 transition cta-button">
+                    Schedule Digital Acceleration Session
+                </a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="sm:hidden text-bg-cream focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden sm:hidden bg-p-teal border-t border-s-sand/20">
+            <a href="index.html" class="block px-4 py-3 text-s-sand hover:bg-p-teal/90 transition">Home</a>
+            <a href="services_work.html" class="block px-4 py-3 text-s-sand hover:bg-p-teal/90 transition">Services & Work</a>
+            <a href="our_work.html" class="block px-4 py-3 text-s-sand hover:bg-p-teal/90 transition">Our Work</a>
+            <a href="company_resources.html" class="block px-4 py-3 text-a-lime font-bold hover:bg-p-teal/90 transition">Expertise & Resources</a>
+            <a href="contact.html" class="block px-4 py-3 text-p-teal bg-a-lime hover:bg-a-lime/80 transition font-bold">Schedule Digital Acceleration Session</a>
+        </div>
+    </header>
+
+    <main class="bg-bg-cream">
+        <!-- Article Header Section with Rich Media -->
+        <section class="pt-20 pb-12 md:pt-32 md:pb-16 text-center bg-s-sand/50 hero-banner-placeholder border-b border-p-teal/10">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+                <p class="text-sm font-semibold tracking-widest uppercase text-bg-cream mb-3">Strategy & Insights</p>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-4 text-bg-cream">
+                    Generative Engine Optimization (GEO): The New Rules of Search in 2026
+                </h1>
+                <p class="text-lg md:text-xl text-s-sand mt-6 flex justify-center items-center space-x-4">
+                    <span>By Chotu Labs Strategy Team</span>
+                    <span class="opacity-70">|</span>
+                    <span>October 15, 2025</span>
+                    <span class="opacity-70">|</span>
+                    <span class="font-bold text-a-lime">12 min read</span>
+                    <span class="opacity-70">|</span>
+                    <span class="text-sm px-2 py-0.5 bg-a-lime text-p-teal rounded-full font-extrabold tracking-tight">ADVANCED</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- NEW: Table of Contents (TOC) / Quick Navigation -->
+        <section class="py-10 bg-s-sand border-b border-p-teal/10">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
+                <div class="p-4 md:p-6 bg-bg-cream rounded-xl border border-p-teal/20 shadow-xl">
+                    <h3 class="text-xl font-extrabold text-p-teal mb-4 border-b border-p-teal/20 pb-2">Quick Navigation</h3>
+                    <div class="toc-grid grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 divide-s-sand/50">
+                        
+                        <!-- TOC Item 1 -->
+                        <a href="#shift" class="toc-item">
+                            <span class="toc-item-number text-p-teal/20">01</span>
+                            <span class="toc-item-text">Generative Shift & Zero-Click Reality</span>
+                        </a>
+                        
+                        <!-- TOC Item 2 -->
+                        <a href="#pillars" class="toc-item">
+                            <span class="toc-item-number text-p-teal/20">02</span>
+                            <span class="toc-item-text">Strategic Pillars for Generative Engine Optimization (GEO)</span>
+                        </a>
+                        
+                        <!-- TOC Item 3 -->
+                        <a href="#scorecard" class="toc-item">
+                            <span class="toc-item-number text-p-teal/20">03</span>
+                            <span class="toc-item-text">The New Scorecard: Measuring Visibility</span>
+                        </a>
+                        
+                        <!-- TOC Item 4 -->
+                        <a href="#outlook" class="toc-item">
+                            <span class="toc-item-number text-p-teal/20">04</span>
+                            <span class="toc-item-text">Future Outlook & Citation Power</span>
+                        </a>
+                        
+                         <!-- TOC Item 5 -->
+                        <a href="#takeaway" class="toc-item border-r md:border-r-0">
+                            <span class="toc-item-number text-p-teal/20">05</span>
+                            <span class="toc-item-text">Key Takeaway for Your Business</span>
+                        </a>
+                         <!-- TOC Item 6 -->
+                        <a href="#related" class="toc-item border-r-0">
+                            <span class="toc-item-number text-p-teal/20">06</span>
+                            <span class="toc-item-text">Related Articles</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Article Content -->
+        <section class="py-16 md:py-24">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl article-content">
+                
+                <p><span class="first-letter">T</span>he tectonic plates of digital visibility are shifting. For nearly three decades, Search Engine Optimization (SEO) governed the flow of online traffic. Today, the integration of generative AI—from Google’s AI Overviews to ChatGPT—has fundamentally altered the user experience, **replacing ranked links with synthesized, authoritative answers.**</p>
+                
+                <p>Relying solely on classic SEO is a strategy built on sand. Gartner predicts **40% of B2B queries will be satisfied inside an answer engine by 2026**. Traditional search volume is projected to **decline by 25%**. The new discipline defining success in this landscape is **Generative Engine Optimization (GEO).**</p>
+                
+                <p>GEO is a novel paradigm designed to optimize content for generative engines (GEs). It requires strategists to focus on ensuring their content is **cited, recalled, and legitimized by AI systems as a credible source.**</p>
+
+                <!-- Section: Why Traditional Metrics Are Failing -->
+                <h2 id="shift">The Generative Shift: Why Traditional Metrics Are Failing</h2>
+                
+                <p>GEs synthesize information from multiple sources to deliver a single, summarized multimodal response.</p>
+
+                <h3>Beyond the Blue Links: The Zero-Click Reality</h3>
+                <p>The dominance of AI-generated answers has accelerated the trend of **zero-click searches**. Users often receive the definitive answer directly on the search engine results page (SERP), eliminating the need to click through to a website.</p>
+                
+                <p>This elevates the importance of **brand authority**. The highest value optimization now lies in becoming the authoritative source the AI chooses to cite. GEO is the process of adapting content to appear on platforms like ChatGPT. The core distinction lies in focus:</p>
+                
+                <ul>
+                    <li><strong>SEO Goal:</strong> Drive trackable traffic via rankings, keywords, and metadata.</li>
+                    <li><strong>GEO Goal:</strong> Ensure the AI cites your content, relying on content quality, structure, and relevance.</li>
+                </ul>
+                
+                <p>Critically, **GEO is not replacing SEO; rather, it builds on the solid foundation set by SEO** to enhance visibility across fast-rising AI-powered search engines.</p>
+                
+                <!-- Section: Strategic Pillars -->
+                <h2 id="pillars">Strategic Pillars for Generative Engine Optimization (GEO)</h2>
+                
+                <p>To succeed in the generative era, we must move beyond outdated SEO practices like keyword stuffing. The winning strategy hinges on **quality and semantic mapping**—engineering content for machine scannability and justification.</p>
+
+                <h3>1. Structure Content for Direct Extraction</h3>
+                <p>LLMs generate responses grounded on retrieved sources, ensuring attribution. Content must be structured to be easily digestible and cite-worthy.</p>
+                
+                <h4>Actionable Formatting Tactics:</h4>
+                <ul>
+                    <li><strong>Direct Answer Blocks:</strong> Every key question should be immediately followed by a concise, introductory paragraph (ideally &lt;300 characters).</li>
+                    <li><strong>Use Structured Data:</strong> Implement `FAQPage` and `HowTo` schema markup, which provides the AI with clean, ordered data.</li>
+                    <li><strong>Embrace Conversational Phrasing:</strong> Focus on user intent and context with conversational phrasing (e.g., “How do I fix a stuck garage door?”).</li>
+                </ul>
+
+                <h3>2. Establish Authority and Credibility</h3>
+                <p>Generative engines prioritize sources that demonstrate **Expertise, Authoritativeness, and Trustworthiness (E-E-A-T)**. AI systems prioritize demonstrably expert content backed by verifiable data.</p>
+
+                <h4>Strategies to Boost AI-Perceived Authority:</h4>
+                <ul>
+                    <li><strong>Fact-Density and Citation:</strong> Produce **fact-dense** content, adding relevant **statistics** and **quotations**. Adding these boosts source visibility by **up to 40%**.</li>
+                    <li><strong>Showcase Expertise:</strong> Beef up author profiles with credentials, awards, and case studies. AI Search systematically biases towards **Earned Media**.</li>
+                    <li><strong>Fluency and Clarity:** Improving fluency and making content **Easy-to-Understand** resulted in a 15–30% visibility boost.</li>
+                </ul>
+
+                <h3>3. Semantic Mapping and Query Fan-Out</h3>
+                <p>AI systems frequently expand initial user queries into adjacent questions (**query fan-out**). Winning in GEO means ensuring visibility across the entire research journey.</p>
+                
+                <p>Agencies find success by mapping the full set of research questions buyers naturally use, allowing them to capture citations across the entire funnel. This requires establishing **topical authority** by covering a subject comprehensively.</p>
+
+                <!-- Section: The New Scorecard -->
+                <h2 id="scorecard">The New Scorecard: Measuring Visibility, Not Just Clicks</h2>
+
+                <p>Success in GEO cannot be measured purely by traditional metrics. We must adopt a comprehensive framework that measures **Answer Inclusion Rate** and semantic influence.</p>
+
+                <!-- Metric Table -->
+                <div class="overflow-x-auto my-8">
+                    <table class="min-w-full bg-s-sand border border-p-teal/50 rounded-lg shadow-md">
+                        <thead>
+                            <tr class="bg-p-teal text-bg-cream">
+                                <th class="py-3 px-4 text-left text-sm font-bold">GEO Metric</th>
+                                <th class="py-3 px-4 text-left text-sm font-bold">Definition</th>
+                                <th class="py-3 px-4 text-left text-sm font-bold">Strategic Significance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-p-teal/10">
+                                <td class="py-3 px-4 font-semibold text-p-teal">AI-Generated Visibility Rate (AIGVR)</td>
+                                <td class="py-3 px-4">Frequency and prominence with which your content is featured in AI responses.</td>
+                                <td class="py-3 px-4">Demonstrates that your content is recognized and prioritized by AI.</td>
+                            </tr >
+                            <tr class="border-b border-p-teal/10">
+                                <td class="py-3 px-4 font-semibold text-p-teal">Semantic Relevance Score (SRS)</td>
+                                <td class="py-3 px-4">Alignment between content and user query intent.</td>
+                                <td class="py-3 px-4">Confirms contextual relevance for AI comprehension.</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 font-semibold text-p-teal">AI Engagement Conversion Rate (AECR)</td>
+                                <td class="py-3 px-4">Conversion rate from user interactions following AI-generated content.</td>
+                                <td class="py-3 px-4">Links GEO efforts directly to business outcomes.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Case Snippet: Higher Conversions from AI</h3>
+                <p>Traffic coming from **AI referrals converts at a significantly higher rate** because the AI acts as a pre-qualifying sales agent.</p>
+                <p>An agency focusing on GEO saw an **+83.33% lift in monthly conversions**. Leads sourced through AI citations converted at a massive **25X higher rate** than those from traditional search. This is magnified because Microsoft Copilot’s click-through rate on cited answers is **6× higher than classic organic links**.</p>
+
+                <!-- Section: Future Outlook -->
+                <h2 id="outlook">Future Outlook: The Democratic Power of Citation</h2>
+                <p>As algorithms integrate AI, **algorithm volatility** becomes the new permanent state. Successfully **navigating algorithm volatility** requires integrating classic SEO with new GEO levers.</p>
+                
+                <p>One significant long-term implication is GEO's potential to **democratize visibility**. Generative engines utilize LLMs conditioned on content. This means that lower-ranked websites can benefit significantly more from GEO by enhancing quality and authority, allowing them to compete more effectively.</p>
+                
+                <p>By 2026, the marketing imperative is clear: Your brand must be remembered, recalled, and legitimized by AI systems. Success hinges on investing in strategies that earn algorithmic legitimacy.</p>
+
+                <!-- Key Takeaway -->
+                <div id="takeaway" class="bg-a-lime/30 p-6 rounded-lg border-l-4 border-a-lime mt-10">
+                    <h3 class="text-p-teal !mt-0">Key Takeaway: What this means for your business</h3>
+                    <p class="text-n-graphite">GEO marks the shift from optimizing for a ranked list of links to optimizing for a single, comprehensive answer.</p>
+                    <p class="text-n-graphite font-semibold">The future of visibility is defined by **citation, not just clicks**. Businesses must immediately audit their core evergreen content, structuring it with direct Q&A blocks and structured data (schema) to maximize fact-density and machine interpretability. By focusing on becoming the authoritative, trustworthy source for complex queries, brands can secure their position in the new generative search landscape and capture high-intent leads that convert at dramatically higher rates.</p>
+                </div>
+
+                <!-- Related Articles Section -->
+                <div id="related" class="mt-16 pt-10 border-t border-p-teal/10">
+                    <h2 class="!mt-0 text-3xl font-extrabold text-p-teal">Related Articles</h2>
+                    <ul class="space-y-4 pt-4">
+                        <li class="border-b border-s-sand/50 pb-4">
+                            <a href="#" class="text-xl font-semibold text-n-graphite hover:text-p-teal transition duration-200">The 7-Figure Marketing Roadmap for Schools (Download Guide)</a>
+                            <p class="text-sm text-n-graphite/70">Resource | Beginner | 8 min read</p>
+                        </li>
+                        <li class="border-b border-s-sand/50 pb-4">
+                            <a href="#" class="text-xl font-semibold text-n-graphite hover:text-p-teal transition duration-200">The CMO's Tech Stack Checklist for 2025 Efficiency</a>
+                            <p class="text-sm text-n-graphite/70">Article | Intermediate | 7 min read</p>
+                        </li>
+                        <li>
+                            <a href="#" class="text-xl font-semibold text-n-graphite hover:text-p-teal transition duration-200">Case Study: 40% Time Saved with Automation at Skinette Clinic</a>
+                            <p class="text-sm text-n-graphite/70">Case Study | Advanced | 5 min read</p>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Global CTA Section -->
+        <section id="global-cta" class="py-20 bg-p-teal text-bg-cream text-center">
+            <h2 class="text-4xl font-extrabold mb-4">Ready for Your Digital Acceleration Session?</h2>
+            <p class="text-xl mb-6">We'll outline your customized Marketing Roadmap within 48 hours. Call us directly: **(880) 093-6344**</p>
+            <a href="contact.html" class="cta-button inline-flex items-center justify-center px-10 py-4 border border-transparent text-lg font-bold rounded-xl shadow-2xl shadow-a-lime/60 text-p-teal bg-a-lime hover:bg-a-lime/80 transition duration-300 transform hover:scale-[1.03]">
+                Request a Quote Now
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Footer: Detailed, Multi-Column Structure (Global Footer) -->
+    <footer class="bg-p-teal py-16 text-bg-cream">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Four Equal Columns (Navigation and Contact) -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12 pb-10 mb-10 border-b border-p-teal/50">
+                
+                <!-- Column 1: Services & Work -->
+                <div>
+                    <h4 class="text-lg font-bold text-bg-cream mb-4">Services & Work</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="services_work.html#strategy-dominance" class="text-s-sand hover:text-a-lime transition">Digital Strategy</a></li>
+                        <li><a href="services_work.html#services-grid" class="text-s-sand hover:text-a-lime transition">Channel Optimization (SEO/PPC/SOCIAL)</a></li>
+                        <li><a href="services_work.html#services-grid" class="text-s-sand hover:text-a-lime transition">Conversion Rate Optimization</a></li>
+                        <li><a href="our_work.html#work" class="text-s-sand hover:text-a-lime transition">Industry Specialization</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: Company & Resources -->
+                <div>
+                    <h4 class="text-lg font-bold text-bg-cream mb-4">Company & Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="company_resources.html#team" class="text-s-sand hover:text-a-lime transition">Who We Are</a></li>
+                        <li><a href="#" class="text-s-sand hover:text-a-lime transition">Our Core Values</a></li>
+                        <li><a href="#" class="text-s-sand hover:text-a-lime transition">Careers</a></li>
+                        <li><a href="company_resources.html#resources" class="text-s-sand hover:text-a-lime transition">Blog & Insights</a></li>
+                        <li><a href="company_resources.html#resources" class="text-s-sand hover:text-a-lime transition">Free Guides & Assets</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Office & Contact -->
+                <div>
+                    <h4 class="text-lg font-bold text-bg-cream mb-4">Office & Contact</h4>
+                    <address class="text-s-sand text-sm not-italic mb-2">
+                        1074 Broadway,
+                        <br>
+                        Woodmere, NY
+                        <br>
+                        11598
+                    </address>
+                    <p class="text-s-sand text-lg font-bold">
+                        <a href="tel:8800936344" class="hover:text-a-lime transition">(880) 093-6344</a>
+                    </p>
+                </div>
+                
+                <!-- Column 4: Legal & Support -->
+                <div>
+                    <h4 class="text-lg font-bold text-bg-cream mb-4">Legal & Support</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="contact.html" class="text-s-sand hover:text-a-lime transition">Request a Quote</a></li>
+                        <li><a href="#" class="text-s-sand hover:text-a-lime transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-s-sand hover:text-a-lime transition">Terms of Use</a></li>
+                        <li><a href="#" class="text-s-sand hover:text-a-lime transition">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Logo, Copyright, and Social Block (BOTTOM SECTION) -->
+            <div>
+                <a href="index.html" class="text-3xl font-extrabold tracking-tight text-bg-cream">
+                    Chotu Labs<span class="text-a-lime">.</span>
+                </a>
+                <p class="text-xs text-s-sand leading-relaxed max-w-xs pt-4">
+                    &copy; 2025 Chotu Labs Marketing LLC. All Rights Reserved.
+                </p>
+                <div class="flex space-x-4 text-xl text-s-sand pt-4">
+                    <!-- Simulated Social Icons -->
+                    <a href="#" aria-label="YouTube" class="hover:text-a-lime transition duration-200">YT</a> 
+                    <a href="#" aria-label="LinkedIn" class="hover:text-a-lime transition duration-200">IN</a>
+                    <a href="#" aria-label="Facebook" class="hover:text-a-lime transition duration-200">FB</a>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+    
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        // 1. Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // 2. Close mobile menu on anchor link click
+        document.getElementById('mobile-menu').querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                // Check if the link is an anchor link (starts with #)
+                if (link.getAttribute('href').startsWith('#')) {
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
